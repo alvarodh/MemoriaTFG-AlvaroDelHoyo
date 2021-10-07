@@ -51,27 +51,28 @@
 \vspace{1.75cm}
 
 \Large
-TITULACIÓN EN MAYÚSCULAS
+2039 - GRADO EN INGENIERIA EN SISTEMAS AUDIOVISUALES Y MULTIMEDIA (FUENLABRADA)
 
 \vspace{0.4cm}
 
 \large
-Curso Académico 202X/202X
+Curso Académico 2021/2022
 
 \vspace{0.8cm}
 
-Trabajo Fin de Grado/Máster
+Trabajo Fin de Grado
 
 \vspace{2.5cm}
 
 \LARGE
-TÍTULO DEL TRABAJO EN MAYÚSCULAS
+IMPLEMENTACIÓN DE FUNCIONALIDADES EN LEARNINGML
 
 \vspace{4cm}
 
 \large
-Autor : Nombre del Alumno/a \\
-Tutor : Dr. Nombre del Profesor/a
+Autor : Álvaro del Hoyo Arias \\
+Tutor : Dr. Gregorio Robles Martínez \\
+Co-Tutor : Juan David Rodríguez García
 \end{center}
 \end{titlepage}
 
@@ -89,21 +90,22 @@ Tutor : Dr. Nombre del Profesor/a
 \vspace{-4cm}
 \begin{center}
 \LARGE
-\textbf{Trabajo Fin de Grado/Máster}
+\textbf{Trabajo Fin de Grado}
 
 \vspace{1cm}
 \large
-Título del Trabajo con Letras Capitales para Sustantivos y Adjetivos
+Implementación de Funcionalidades en LearnigML
 
 \vspace{1cm}
 \large
-\textbf{Autor :} Nombre del Alumno/a \\
-\textbf{Tutor :} Dr. Nombre del Profesor/a
+\textbf{Autor :} Álvaro del Hoyo Arias \\
+\textbf{Tutor :} Dr. Gregorio Robles Martínez \\
+\textbf{Co-Tutor :} Juan David Rodríguez García
 
 \end{center}
 
 \vspace{1cm}
-La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 202X, siendo calificada por el siguiente tribunal:
+La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 2021, siendo calificada por el siguiente tribunal:
 
 
 \vspace{0.5cm}
@@ -125,7 +127,7 @@ y habiendo obtenido la siguiente calificación:
 
 \vspace{1cm}
 \begin{flushright}
-Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 202X
+Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 2021
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -134,8 +136,10 @@ Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 202X
 \chapter*{}
 \pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
 \begin{flushright}
-\textit{Dedicado a \\
-mi familia / mi abuelo / mi abuela}
+\textit{Dedicado\\
+	al Atleti,\\que me hizo no dejar de creer\\nunca\\
+	mi familia,\\que siempre me levantó\\cuando me caía,\\
+	mis amigos,\\que han estado a mi lado\\en este maratón que es la vida.}
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -145,8 +149,15 @@ mi familia / mi abuelo / mi abuela}
 %\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
 \markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado 
 
-Aquí vienen los agradecimientos\ldots Aunque está bien acordarse de la pareja, no hay que olvidarse de dar las gracias a tu madre, que aunque a veces no lo parezca disfrutará tanto de tus logros como tú\ldots 
-Además, la pareja quizás no sea para siempre, pero tu madre sí.
+Siempre hay que empezar por el principio, y el principio de todo fue cosa de mis padres, que me han dado todo lo que han podido, que me han apoyado en todas mis decisiones, que nunca han dejado de creer en mi y que siempre han buscado una forma de hacerme feliz.
+
+También hay que mencionar a mi hermana, que me ayuda, me apoya, me hace sonreir y siempre está a mi lado cuando la necesito.
+
+No me voy a olvidar de vosotros, de los que quedábamos por las mañanas en la cafetería, para un café, lo que surja, y subir a clase, son muchos años estando juntos, hemos pasado de no ser nada, desconocidos, a ser más que amigos, hermanos.
+
+Gracias a todos, a los que siguieron hasta el final, a los que se quedaron por el camino.
+
+Gracias.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen
@@ -155,17 +166,11 @@ Además, la pareja quizás no sea para siempre, pero tu madre sí.
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-Aquí viene un resumen del proyecto.
-Ha de constar de tres o cuatro párrafos, donde se presente de manera clara y concisa de qué va el proyecto. 
-Han de quedar respondidas las siguientes preguntas:
+Este proyecto consiste en añadir la funcionalidad del reconocimiento de audio a la página web \texttt{LearningML}\footnote{\url{https://learningml.org/editor/}}, esta página nació con la intención de ayudar a los profesores a poder explicar de una manera más simple el funcionamiento del \texttt{Machine Learning} y las posibilidades que ésto ofrece a alumnos de entre 12 y 16 años.
 
-\begin{itemize}
-  \item ¿De qué va este proyecto? ¿Cuál es su objetivo principal?
-  \item ¿Cómo se ha realizado? ¿Qué tecnologías están involucradas?
-  \item ¿En qué contexto se ha realizado el proyecto? ¿Es un proyecto dentro de un marco general?
-\end{itemize}
+Se ha realizado usando Angular, que es un entorno de trabajo que utiliza HTML y CSS para construir aplicaciones web, además de utilizar TypeScript por debajo para realizar toda funcionalidad dentro de la propia aplicación.
 
-Lo mejor es escribir el resumen al final.
+Este proyecto se ha realizado teniendo en cuenta que debía de tener una interfaz sencilla y amigable, en la que la obtención de datos fuera simple, pero efectiva.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -174,9 +179,11 @@ Lo mejor es escribir el resumen al final.
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-Here comes a translation of the ``Resumen'' into English. 
-Please, double check it for correct grammar and spelling.
-As it is the translation of the ``Resumen'', which is supposed to be written at the end, this as well should be filled out just before submitting.
+This project consists of adding the functionality of audio recognition to the web page \texttt{LearningML}\footnote{\url{https://learningml.org/editor/}}, this page was born with the intention of helping teachers to be able to explain in a simpler way the operation of the \texttt{Machine Learning} and the possibilities that this offers to students between 12 and 16 years old.
+
+It has been done using Angular, which is a work environment that uses HTML and CSS to build web applications, in addition to using TypeScript underneath to perform all functionality within the application itself.
+
+This project has been carried out bearing in mind that it should have a simple and friendly interface, in which data collection was simple, but effective.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -207,106 +214,43 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 
 \cleardoublepage
 \chapter{Introducción}
-\label{sec:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
+\label{chap:intro} % etiqueta para poder referenciar luego en el texto con \ref{chap:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
-En este capítulo se introduce el proyecto.
-Debería tener información general sobre el mismo, dando la información sobre el contexto en el que se ha desarrollado.
+En nuestros días, es un hecho incuestionable la ingente cantidad de información que se genera cada segundo en nuestro planeta. También puede aportar enorme valor a cualquier entidad o puede suponer un consumo excesivo de recursos. El análisis inteligente de este tipo de información está empezando a ser un requisito para la supervivencia de muchas empresas y organizaciones.\cite{mate2014big}
 
-No te olvides de echarle un ojo a la página con los cinco errores de escritura más frecuentes\footnote{\url{http://www.tallerdeescritores.com/errores-de-escritura-frecuentes}}.
+El \texttt{Machine Learning} es un subconjunto de la inteligencia artificial\cite{zhang2020machine} que permite analizar una cantidad de datos muy grande de una manera eficiente y buena. La necesidad de que apareciese algo que fuera capaz de analizar, ordenar, definir y predecir futuros datos es algo que ha ido apareciendo con el paso de las décadas, sólo en 2018 se generaron 33 zettabytes de datos, que supone un incremento del 16.5\% respecto de los datos generados en 2009\cite{cantidad-datos}. El problema a la hora de realizar un análisis de estos datos está en la complejidad de los mismos, que hace que un ser humano pueda tardar años en realizar un análisis al que una máquina bien preparada únicamente dedicaría segundos. Por ello es tan importante el desarrollo del \texttt{Machine Learning} ya que permite procesar grandes cantidades de datos complejos, transformándolos en información más sencilla y legible para nosotros, los seres humanos.
 
-Aconsejo a todo el mundo que mire y se inspire en memorias pasadas.
-Las memorias de los proyectos que he llevado yo están (casi) todas almacenadas en mi web del GSyC\footnote{\url{https://gsyc.urjc.es/~grex/pfcs/}}.
+Partiendo de esta rama, el análisis de audio no se ha quedado atrás y se ha convertido en algo normal en nuestro día a día, aplicaciones como \texttt{Alexa} o \texttt{Siri}, de \texttt{Google} e \texttt{IOS} respectivamente, hacen que el reconocimiento de patrones audibles parezca algo sencilla, no obstante, estas aplicaciones llevan miles de horas de trabajo detrás.
 
-\section{Sección}
-\label{sec:seccion}
+\section{Presentación de la aplicación}
+\label{sec:presentacion}
 
-Esto es una sección, que es una estructura menor que un capítulo. 
+\texttt{LearningML} es una aplicación creada por Juan David Rodríguez que permite llevar el \texttt{Machine Learning} a un entorno más amigable, haciendo que el reconocimiento facil o el reconocimiento de patrones en textos se pueda hacer, observar y comprobar de una manera sencilla y eficiente. Hace uso de redes neuronales, aunque también dispone de otros algoritmos como pueda ser KNN. Esto hace que sea una herramienta muy útil a nivel escolar, pero esa no es su única utilidad, ya que incluso la gente que entiende y comprende cómo funcionan los algoritmos antes mencionados pueden llevar a cabo pruebas bastanta exhaustivas sobre la importancia de los parámetros que se vayan a utilizar. También permite la descarga del modelo en un fichero en formato JSON, para así no tener que crear de nuevo el modelo si se quiere continuar haciendo pruebas.
 
-Por cierto, a veces me comentáis que no os compila por las tildes.
-Eso es un problema de codificación.
-Al guardar el archivo, guardad la codificación de ``ISO-Latin-1'' a ``UTF-8'' (o viceversa) y funcionará.
+Además de todas estas funcionalidades, tiene la posibilidad de registro, para mantener los modelos a salvo en la nube, e incluso da la posibilidad de exportar los proyectos a Scratch.
 
-\subsection{Estilo}
-\label{subsec:estilo}
-
-Recomiendo leer los consejos prácticos sobre escribir documentos científicos en \LaTeX \ de Diomidis Spinellis\footnote{\url{https://github.com/dspinellis/latex-advice}}.
-
-Lee sobre el uso de las comas\footnote{\url{http://narrativabreve.com/2015/02/opiniones-de-un-corrector-de-estilo-11-recetas-para-escribir-correctamente-la-coma.html}}. 
-Las comas en español no se ponen al tuntún.
-Y nunca, nunca entre el sujeto y el predicado (p.ej. en ``Yo, hago el TFG'' sobre la coma).
-La coma no debe separar el sujeto del predicado en una oración, pues se cortaría la secuencia natural del discurso.
-No se considera apropiado el uso de la llamada coma respiratoria o \emph{coma criminal}.
-Solamente se suele escribir una coma para marcar el lugar que queda cuando omitimos el verbo de una oración, pero es un caso que se da de manera muy infrecuente al escribir un texto científico (p.ej. ``El Real Madrid, campeón de Europa'').
-
-A continuación, viene una figura, la Figura~\ref{figura:foro_hilos}. 
-Observarás que el texto dentro de la referencia es el identificador de la figura (que se corresponden con el ``label'' dentro de la misma). 
-También habrás tomado nota de cómo se ponen las ``comillas dobles'' para que se muestren correctamente. 
-Nota que hay unas comillas de inicio (``) y otras de cierre (''), y que son diferentes.
-Volviendo a las referencias, nota que al compilar, la primera vez se crea un diccionario con las referencias, y en la segunda compilación se ``rellenan'' estas referencias. 
-Por eso hay que compilar dos veces tu memoria.
-Si no, no se crearán las referencias.
-
- \begin{figure}
-    \centering
-    \includegraphics[bb=0 0 800 600, width=12cm, keepaspectratio]{img/foro1}
-    \caption{Página con enlaces a hilos}
-    \label{figura:foro_hilos}
- \end{figure}
-
-A continuación un bloque ``verbatim'', que se utiliza para mostrar texto tal cual.
-Se puede utilizar para ofrecer el contenido de correos electrónicos, código, entre otras cosas.
-
-{\footnotesize
-\begin{verbatim}
-    From gaurav at gold-solutions.co.uk  Fri Jan 14 14:51:11 2005
-    From: gaurav at gold-solutions.co.uk (gaurav_gold)
-    Date: Fri Jan 14 19:25:51 2005
-    Subject: [Mailman-Users] mailman issues
-    Message-ID: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-
-    Dear Sir/Madam,
-    How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-    Thanks
-
-    From msapiro at value.net  Fri Jan 14 19:48:51 2005
-    From: msapiro at value.net (Mark Sapiro)
-    Date: Fri Jan 14 19:49:04 2005
-    Subject: [Mailman-Users] mailman issues
-    In-Reply-To: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-    Message-ID: <PC173020050114104851057801b04d55@msapiro>
-
-    gaurav_gold wrote:
-    >How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-
-    See the FAQ
-    >Mailman FAQ: http://www.python.org/cgi-bin/faqw-mm.py
-    article 3.11
-\end{verbatim}
-}
+Este proyecto consiste en la integración de un nuevo tipo de análisis: el análisis de audio.
 
 \section{Estructura de la memoria}
 \label{sec:estructura}
 
-En esta sección se debería introducir la esctura de la memoria. 
-
-Así:
-
 \begin{itemize}
-  \item En el primer capítulo se hace una intro al proyecto.
+  \item \textbf{Capítulo \ref{chap:intro}: Introducción. } Se explica qué es, para qué se usa  y cuál es el objetivo de la página web \textit{LearningML} \footnote{\url{https://learningml.org/editor/}}.
   
-  \item En el capítulo~\ref{chap:objetivos} (ojo, otra referencia automática) se muestran los objetivos del proyecto.
+  \item \textbf{Capítulo \ref{chap:objetivos}: Objetivos. } Se describen los objetivos, principales y específicos, del trabajo realizado.
   
-  \item A continuación se presenta el estado del arte en el capítulo~\ref{chap:estado}.
+  \item \textbf{Capítulo \ref{chap:estado}: Estado del arte. } Se hace una breve explicación sobre cada una de las tecnologías utilizadas en el proyecto.
   
-  \item \ldots
+  \item \textbf{Capítulo \ref{chap:diseño-implementacion}: Diseño e implementación } Hay una descripción y explicación detallada sobre la estructura de LearningML, así como el desarrollo e implementación del análisis de audio.
+  
+  \item \textbf{Capítulo \ref{chap:experimentos-validacion}: Experimentos y validación. } Se prueba la funcionalidad implementada con varios ejemplos.
+  
+  \item \textbf{Capítulo \ref{chap:resultados}: Resultados. } Se muestran y comentan los resultados obtenidos en el apartado anterior.
+  
+  \item \textbf{Capítulo \ref{chap:conclusiones}: Conclusiones. } Se comprueba, repasa y explica la resolución del trabajo.
+ 
 \end{itemize}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -317,28 +261,43 @@ Así:
 \chapter{Objetivos} % título del capítulo (se muestra)
 \label{chap:objetivos} % identificador del capítulo (no se muestra, es para poder referenciarlo)
 
+El objetivo de este proyecto consiste en implementar el reconocimiento de audio en la página web \textit{LearningML}.
+
 \section{Objetivo general} % título de sección (se muestra)
 \label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
 
-Aquí vendría el objetivo general en una frase:
-Mi trabajo fin de grado consiste en crear de una herramienta de análisis de los comentarios jocosos en repositorios de software libre alojados en la plataforma GitHub.
+El principal objetivo que persigue el creador de la página web, Juan David Rodríguez García, es ayudar a los jóvenes, entre 12 y 16 años según me ha contado, a entender en qué consiste el \textit{Machine Learning}, para ello implementó el reconocimiento de imágenes y textos mediante el uso de redes neuronales, después se añadieron nuevos algoritmos, como KNN o Naive Bayes.
 
-Recuerda que los objetivos siempre vienen en infinitivo.
-
+Mi objetivo en este proyecto consiste en implementar el reconocimiento de audio, siguiendo la dinámica y tratando de hacerlo de la manera más sencilla e intuitiva posible para el usuario.
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
 
-Los objetivos específicos se pueden entender como las tareas en las que se ha desglosado el objetivo general.
-Y, sí, también vienen en infinitivo.
+\begin{itemize}
+
+  \item Comprender cómo funciona el análisis de audio, para saber qué hay que obtener de cada muestra.
+  \item Analizar la arquitectura de \textit{LearningML}, para que la implementación siga la línea de lo ya creado.
+  \item Añadir en la interfaz un apartado para analizar audio.
+  \item Crear un componente en \textit{Angular} que recoja los datos del usuario, por micrófono o mediante un fichero de audio.
+  \item Analizar los datos obtenidos.
+
+\end{itemize}
 
 
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
 
-A mí me gusta que aquí pongáis una descripción de lo que os ha llevado realizar el trabajo.
-Hay gente que añade un diagrama de GANTT.
-Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6 meses) y a qué nivel de esfuerzo (p.ej., principalmente los fines de semana).
+La idea de empezar a realizar este proyecto surgió por Enero de 2021, pero no fue hasta mediados de Febrero de ese mismo año que comencé a buscar qué podía hacer.
+
+Tras contactar con el Dr. Gregorio Robles, quien me impartió la asignatura de \textit{Protocolos para la Transmisión de Audio y Vídeo}, me propuso realizar implementaciones para esta página web, había bastantes posibilidades que poder implementar, pero finalmente me decidí por el análisis de audio, ya que era algo que tenía más cercano por haber cursado una asignatura sobre este tema en años anteriores, \textit{Tratamiento Digital del Sonido}.
+
+Una vez confirmé con Gregorio que me interesaba hacer esa implementación, me puso en contacto con el creador de la página, Juan David Rodríguez García, quien me explicó el objetivo que perseguía con este proyecto y qué pretendía conseguir con el análisis de audio.
+
+Hubo dos semanas de comprensión de los lenguajes utilizados, \textit{Angular} y \textit{Typescript}, así como de reuniones con Juan David para que nos explicara, tanto a mi como al resto de alumnos que desarrollaban más funcionalidades, cómo funcionaba la arquitectura de la página.
+
+Una vez comprendí cómo funcionaba, comencé con la implementación. Primero tuve que crear los componentes que iba a utilizar, así como introducirlos en los otros componentes principales y dejarlos siguiendo una estructura similara los componentes ya creados. Una vez ya estaba todo creado, comenzó la tarea complicada: rellenar las funciones y procedimientos de manera que fueran funcionales.
+
+Después de unos meses de búsquedas y de desarrollos que no llegaban a ninguna solución, conseguí terminar la implementación de este analizador de audio.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -350,72 +309,144 @@ Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6
 \chapter{Estado del arte}
 \label{chap:estado}
 
-Descripción de las tecnologías que utilizas en tu trabajo. 
-Con dos o tres párrafos por cada tecnología, vale. 
-Se supone que aquí viene todo lo que no has hecho tú.
+\section{HTML 5} 
+\label{sec:html5}
 
-Puedes citar libros, como el de Bonabeau et al., sobre procesos estigmérgicos~\cite{bonabeau:_swarm}. 
-Me encantan los procesos estigmérgicos.
-Deberías leer más sobre ellos.
-Pero quizás no ahora, que tenemos que terminar la memoria para sacarnos por fin el título.
-Nota que el \~ \ añade un espacio en blanco, pero no deja que exista un salto de línea. 
-Imprescindible ponerlo para las citas.
+\texttt{HTML} (\textit{HyperText Markup Language})\cite{mdnhtml} es un lenguaje de marcado que se usa para especificar la estructura de una página web.
 
-Citar es importantísimo en textos científico-técnicos. 
-Porque no partimos de cero.
-Es más, partir de cero es de tontos; lo suyo es aprovecharse de lo ya existente para construir encima y hacer cosas más sofisticadas.
-¿Dónde puedo encontrar textos científicos que referenciar?
-Un buen sitio es Google Scholar\footnote{\url{http://scholar.google.com}}.
-Por ejemplo, si buscas por ``stigmergy libre software'' para encontrar trabajo sobre software libre y el concepto de \emph{estigmergia} (¿te he comentado que me gusta el concepto de estigmergia ya?), encontrarás un artículo que escribí hace tiempo cuyo título es ``Self-organized development in libre software: a model based on the stigmergy concept''.
-Si pulsas sobre las comillas dobles (entre la estrella y el ``citado por ...'', justo debajo del extracto del resumen del artículo, te saldrá una ventana emergente con cómo citar.
-Abajo a la derecha, aparece un enlace BibTeX.
-Púlsalo y encontrarás la referencia en formato BibTeX, tal que así:
+Los documentos de \texttt{HTML} están escritos en texto plano, se estructuran con diversos elementos y cada elemento está encerrado entre dos parejas de etiquetas\cite{mdnhtml}, la estructura global de un documento en \texttt{HTML} se compone de las siguientes etiquetas \cite{gauchat2012gran}:
 
-{\footnotesize
-\begin{verbatim}
-@inproceedings{robles2005self,
-  title={Self-organized development in libre software:
-         a model based on the stigmergy concept},
-  author={Robles, Gregorio and Merelo, Juan Juli\'an 
-          and Gonz\'alez-Barahona, Jes\'us M.},
-  booktitle={ProSim'05},
-  year={2005}
-}
-\end{verbatim}
-}
+\begin{itemize}
+	\item \textbf{\texttt{<!DOCTYPE>}:} Debe de estar en la primera línea del fichero \texttt{HTML}.
+	\item \textbf{\texttt{<html>}:} Se utiliza para comenzar la estructura, esta etiqueta se corresponde con la raíz de la estructura tipo árbol de \texttt{HTML}.
+	\item \textbf{\texttt{<head>}:} Se encarga de facilitar información general del documento (título, set de caracteres, \ldots), también se encuentran las etiquetas correspondientes a los archivos externos (\textit{JavaScript}, \textit{CSS3}).
+	\item \textbf{\texttt{<body>}:} Se trata del cuerpo del fichero, en él se encuentran todas las etiquetas que dan forma a una página web.
+\end{itemize}
 
-Copia el texto en BibTeX y pégalo en el fichero \texttt{memoria.bib}, que es donde están las referencias bibliográficas.
-Para incluir la referencia en el texto de la memoria, deberás citarlo, como hemos hecho antes con~\cite{bonabeau:_swarm}, lo que pasa es que en vez de el identificador de la cita anterior (bonabeau:\_swarm), tendrás que poner el nuevo (robles2005self).
-Compila el fichero \texttt{memoria.tex} (\texttt{pdflatex memoria.tex}), añade la bibliografía (\texttt{bibtex memoria.aux}) y vuelve a compilar \texttt{memoria.tex} (\texttt{pdflatex memoria.tex})\ldots y \emph{voilà} ¡tenemos una nueva cita~\cite{robles2005self}!
+\texttt{HTML5} es la última versión de este lenguaje, respecto de la versión anterior incorpora nuevas etiquetas, como \texttt{<header>}, \texttt{<nav>}, \texttt{<section>}, \texttt{<footer>}; así como una mejora en los formularios, \texttt{<form>} añadiendo validaciones, nuevos campos y nuevos atributos. Además dispone de multitud de \texttt{APIs}, que permiten la reproducción de contenido multimedia (etiquetas \texttt{<audio>} y \texttt{<video>}), el almacenamiento de datos en el lado cliente cuando la sesión se encuentra activa (\textit{Web Storage}), \texttt{<canvas>} que permite realizar dibujos o animaciones y la geolocalización, que permite la muestra e interacción de un mapa de \textbf{Google Maps} en la página web.
 
-También existe la posibilidad de poner notas al pie de página, por ejemplo, una para indicarte que visite la página del GSyC\footnote{\url{http://gsyc.es}}.
+\section{CSS3}
+\label{sec:css3}
 
+\texttt{CSS} (\textit{Cascading Style Sheets})\cite{mdncss} es el lenguaje utilizado para establecer estilos en los documentos \texttt{HTML}. Describe cómo debe de hacerse el renderizado del elemento al que se haga referencia\cite{mdncss}.
 
+\texttt{CSS} es uno de los lenguajes base de la \textit{Open Web} y sus especificaciones están estandarizadas por parte de W3C. Con la llegada de \texttt{CSS3} se incrementó el alcance de las especificaciones, lo que provocó que fuese más efectivo crear y desarrollar módulos en esta versión que en las anteriores.
 
-\section{Sección 1} 
-\label{sec:seccion1}
+\section{TypeScript}
+\label{sec:typescript}
 
-Hemos hablado de cómo incluir figuras.
-Pero no hemos dicho nada de tablas.
-A mí me gustan las tablas.
-Mucho.
-Aquí un ejemplo de tabla, la Tabla~\ref{tabla:ejemplo} (siento ser pesado, pero nota cómo he puesto la referencia).
+\texttt{TypeScript}\cite{typescript} es un lenguaje de programación de código abierto desarrollado por \textit{Microsoft} a partir de \texttt{JavaScript}, añadiendo a este lenguaje nueva sintaxis y tipos, lo que convierte a \texttt{TypeScript} en un superconjunto de \texttt{JavaScript}.
 
-\begin{table}
- \begin{center}
-  \begin{tabular}{ | l | c | r |} % tenemos tres colummnas, la primera alineada a la izquierda (l), la segunda al centro (c) y la tercera a la derecha (r). El | indica que entre las columnas habrá una línea separadora.
-    \hline
-    Uno & 2 & 3 \\ \hline % el hline nos da una línea vertical
-    Cuatro & 5 & 6 \\ \hline
-    Siete & 8 & 9 \\
-    \hline
-  \end{tabular}
-  \label{tabla:ejemplo}
-  \caption{Ejemplo de tabla. Aquí viene una pequeña descripción (el \emph{caption}) del contenido de la tabla. Si la tabla no es autoexplicativa, siempre viene bien aclararla aquí.}
- \end{center}
-\end{table}
+Este lenguaje nació en 2012 a partir de la necesidad de mejora de \texttt{JavaScript}, ya que construir una aplicación a gran con este lenguaje era de una complejidad muy alta. Se trata por ende de un lenguaje bastante útil, ya que mantiene las herramientas incorporadas en \texttt{JavaScript ES6}, además de incorporar un tipado estático para evitar errores en tiempo de ejecución y al añadir objetos basados en clases hace que sea mucho más sencillo utilizar programación orientada a objetos, haciéndola más funcional.
 
+\section{Node.js}
+\label{sec:nodejs}
 
+\texttt{Node.js}\cite{nodejs} es un entorno de ejecución de \texttt{JavaScript} orientado al manejo de evetos asíncronos creado por Ryan Dahl en 2009.\\
+En el lado cliente el \textit{browser} se encarga de interpretar el código de \texttt{JavaScript}, de la misma manera en el lado servidor, \texttt{Node.js} se encarga de facilitar un entorno de ejecución haciendo uso del motor V8 de \textit{Google}.
+
+Al estar orientado al manejo de eventos asíncronos, \texttt{Node.js} puede soportar una gran cantidad de solicitudes. Al contrario de lo que ocurre en los modelos de concurrencia más comunes, que añaden un nuevo hilo a cada una de las conexiones que llegan, provocando que si se tienen muchas solicitudes sean necesarios muchos servidores; \texttt{Node.js} emplea un único hilo, que itera sobre un bucle de eventos asíncronos, haciendo que cada una de las nuevas peticiones sean un nuevo evento dentro de este bucle, consiguiendo así que el flujo de trabajo no quede bloqueado.
+
+\section{Angular}
+\label{sec:angular}
+
+\texttt{Angular}\cite{angularjs} es un \textit{framework} de código abierto creado por \textit{Google} que permite, haciendo uso de \texttt{HTML} y \texttt{TypeScript}, crear aplicaciones web de una única página, conocidas como SPA (\textit{Single Page Application}).
+
+Una de las ventajas de utilizar \texttt{Angular}, así como de todas las SPA, es la alta velocidad de carga entre las distintas vistas que pueda tener la página web, ya que al cambiar de vista no se recarga la página.
+
+Las versiones de este \textit{framework} han ido evolucionando, la primera fue \texttt{AngularJS}, en 2010, mientras que las siguientes versiones han ido evolucionando desde \texttt{Angular2}, la segunda versión. La versión más reciente es de mayo de 2021, \texttt{Angular12}.
+
+Una aplicación de \texttt{Angular} utiliza cuatro clases distintas, que se comunican entre ellas usando decoradores, que se encargan de cargar únicamente los metadatos que necesita esa clase. Las clases que utiliza \texttt{Angular} son:
+
+\begin{itemize}
+	\item \textbf{Módulos}: Definen los componentes que van a formar la aplicación, así como las dependencias y los servicios. El módulo principal suele nombrarse como \texttt{AppModule}, y es el que contiene el sistema de arranque de la propia aplicación. Gracias a esta organización la carga inicial es mínima, ya que los módulos se cargan únicamente cuando vayan a ser utilizados.
+	\item \textbf{Componentes}: Contienen la lógica y los datos de la propia aplicación, controlan las plantillas que se cargan al cambiar la \texttt{URL}, conformando la interfaz de usuario. Los componentes pueden tener a su vez uno o varios subcomponentes, que se relacionan entre sí usando eventos, para actualizar datos, o usando propiedades, que modifican las plantillas escritas en \texttt{HTML} conformando las vistas. Una clase se define como Componente usando el decorador @Component.
+	\item \textbf{Servicios}: Se componen de los datos o funcionalidades generales, que no forman parte de ninguna vista específicamente. Se usan para intercambiar datos entre componentes. Para definir una clase como Servicio se utiliza el decorador @Injectable.
+	\item \textbf{Directivas}: Definen los términos claves que utilizan las plantillas. Hay dos clases de directivas:
+	\begin{itemize}
+		\item Directiva de atributo: Modifica el comportamiento del componente.
+		\item Directiva estructural: Modifica la apariencia.
+	\end{itemize}
+\end{itemize}
+
+\subsection{MVC}
+\label{subsec:mvc}
+
+\texttt{MVC} (\textit{Modelo Vista-Controlador})\cite{mvc}, es el patrón que se utiliza en \texttt{Angular} a la hora de desarrollar una aplicación. Los elementos que lo conforman son:
+
+\begin{itemize}
+	\item \textbf{Modelo}: Se encarga de representar y tratar los datos de la aplicación, manejando las consultas y acciones de la base de datos, si la tuviera. 
+	\item \textbf{Vista}: Se encarga del diseño de la interfaz de usuario, haciendo que el Modelo y el Controlador no se tengan que hacer cargo de esa parte.
+	\item \textbf{Controlador}: Recibe los eventos de entrada, se comunica con el Modelo, obtiene las vistas que sean necesarias y produce una salida como respuesta a ese evento.
+\end{itemize}
+
+Esta arquitectura tiene varias ventajas sobre otro tipo de arquitecturas del mismo tipo ya que mejora la estabiliad, separando cada tipo de lógica, facilita el mantenimiento y posibilita el uso de componentes.
+
+\subsection{CLI}
+\label{subsec:cli}
+
+\texttt{Angular CLI} (\textit{Command Line Interface})\cite{angularcli} es una herramienta de línea de instrucciones creada por los desarrolladores de \texttt{Angular}. Contiene herramientas que se pueden utilizar para el mantenimiento y desarrollo de aplicaciones, entre estas herramientas destacan el compilador, el sistema de testing y el servidor web. Gracias a estas herramientas predefinidas se puede crear el esqueleto básico de una aplicación en \texttt{Angular} de una manera muy sencilla, así como los nuevos componentes, servicios o directivas que forman la aplicación.
+
+\section{TensorFlow}
+\label{sec:tensorflow}
+
+\texttt{Tensorflow}\cite{tensorflow} es un sistema de aprendizaje automático creado por \textit{Google Brain}, es una plataforma que permite construir y entrenar redes neuronales de una manera muy eficiente y completa.. En 2015 \texttt{Tensorflow} pasó a ser \textit{software} libre, por lo que todo el mundo podría utilizarlo en sus aplicaciones, así como editarla siempre que fuera necesario.
+
+\subsection{MobileNets}
+\label{subsec:mobilenets}
+
+\texttt{MobileNets} es una biblioteca de \texttt{Tensorflow}, así como una red neuronal convolucional, que es mucho más eficiente ya que únicamente utiliza una capa convolucional de la dimensión deseada con un único filtro.
+
+Esta biblioteca es utilizada por el reconocimiento de imágenes.
+
+\section{Machine Learning}
+\label{sec:machine-learning}
+
+El \texttt{Machine Learning}\cite{rouhiainen2018inteligencia}, o Aprendizaje Máquina, es uno de los principales enfoques utilizados en la inteligencia artifical moderna, utiliza algoritmos para diferenciar patrones dentro de unos datos dados. Hay tres tipos de aprendizaje:
+
+\begin{itemize}
+	\item \textbf{Aprendizaje supervisado}: El usuario tiene que facilitar los datos etiquetados y organizados, indicando cómo deberían de ser las posibles nuevas entradas.
+	\item \textbf{Aprendizaje no supervisado}: El propio algoritmo busca la manera de etiquetar cada una de las entradas, sin tener ninguna información sobre el modelo.
+	\item \textbf{Aprendizaje por refuerzo}: El algoritmo recibe un refuerzo positivo cada vez que hace una predicción correcta, estos algoritmos mejoran con el uso.
+\end{itemize}
+
+\section{LearningML}
+\label{sec:learningml}
+
+\texttt{LearningML} es una aplicación creada por Juan David Rodríguez García en el año 2020.\\
+Su labor consiste en facilitar la labor de los profesores dándoles una herramienta que permita explicar el \texttt{Machine Learning}, esta herramienta está concebida para alumnos de entre 12 y 16 años. Actualmente se está utilizando en ambientes educativos reales.
+
+\section{Análisis de audio}
+\label{sec:analisis-audio}
+
+El análisis de señales de audio\cite{gonzalez2019analisis} es un tema importante en los tiempos que vivimos. La tecnología actual nos da la posibilidad de crear sistemas de reconocimiento de señales de audio eficientes en entornos semánticos restringidos. El proceso de extracción de características no supervisado supone un avance en este campo, ya que reduce el error en la clasificación de fonemas.
+
+\subsection{Web Audio API}
+\label{subsec:audio-api}
+
+Para este proyecto se utilizó la API web de audio\cite{web-audio-api}, que proporciona un sistema potente y versátil para controlar el audio, permitiendo a los desarrolladores elegir fuentes de audio, agregar efectos, crear visualizaciones y mucho más.
+
+Las operaciones de audio básicas están dentro de un \texttt{AudioContext} y se realizan mediante \texttt{AudioNodes}, que están vinculados entre sí para formar un gráfico de enrutamiento de audio. Dentro de un mismo context se pueden usar varias fuentes.
+
+Un proyecto simple usando esta herramienta tendría la siguiente forma:
+
+\begin{itemize}
+	\item 1. Crear contexto de audio.
+	\item 2. Dentro del contexto, se crean fuentes.
+	\item 3. Se crean nodos de efectos, como reverberación, filtro biquad, panoramizador, compresor...
+	\item 4. Elegir el destino final del audio, por ejemplo, los altavoces.
+	\item 5. Conecte las fuentes a los efectos y los efectos al destino.
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm, keepaspectratio]{img/web-audio-api.png}
+	\caption{Análisis de audio con la API web de audio.}\label{fig:audio-api}
+\end{figure}
+
+No obstante, en este proyecto no se crearon nodos de efecto, ya que los datos que se necesitaban eran los datos en bruto.
+
+Para obtener los datos se usó la interfaz de \texttt{AnalyserNode}\cite{analyser-node}, en específico la función \texttt{getByteFrequencyData()}, que guarda los datos obtenidos en frecuencia en un array previamente creado.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -424,42 +455,156 @@ Aquí un ejemplo de tabla, la Tabla~\ref{tabla:ejemplo} (siento ser pesado, pero
 
 \cleardoublepage
 \chapter{Diseño e implementación}
-
-Aquí viene todo lo que has hecho tú (tecnológicamente). 
-Puedes entrar hasta el detalle. 
-Es la parte más importante de la memoria, porque describe lo que has hecho tú.
-Eso sí, normalmente aconsejo no poner código, sino diagramas.
+\label{chap:diseño-implementacion}
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
 
-Si tu proyecto es un software, siempre es bueno poner la arquitectura (que es cómo se estructura tu programa a ``vista de pájaro'').
+La arquitectura de \texttt{LearningML} está basada en el modelo MVC\cite{mvc}, está muy bien desarrollada y preparada para que, en el caso de querer realizar cambios, los desarrolladores no tengan muy complicado el añadir funcionalidades.
 
-Por ejemplo, puedes verlo en la figura~\ref{fig:arquitectura}.
-\LaTeX \ pone las figuras donde mejor cuadran. 
-Y eso quiere decir que quizás no lo haga donde lo hemos puesto\ldots
-Eso no es malo.
-A veces queda un poco raro, pero es la filosofía de \LaTeX: tú al contenido, que yo me encargo de la maquetación.
+En la figura~\ref{fig:arquitectura} podemos ver cómo está organizada aplicación, primero se crea el modelo, escogiendo el tipo de extracción de características que se van a realizar, así como el algoritmo que se va a utilizar. El servicio \texttt{labeled-data-manager} se encarga de manejar todos los cambios y de guardar las características que definen al modelo, como el tipo de análisis que vamos a realizar o el algoritmo que se utiliza.
+
+Después de elegir el tipo de análisis y el algoritmo, el modelo procede a analizar todas las muestras que se han añadido, este análisis se realiza con el servicio \texttt{FeatureExtraction}, que a su vez tiene dos servicios debajo suya: \texttt{FeatureExtractorText} y \texttt{FeatureExtractorImage}.
+
+Cada uno de ellos se encarga de realizar la extracción de características del modelo, atendiendo al tipo de datos que se le van a introducir.
+
+Una vez se han extraído los datos, se procede a crear el modelo, la creación se produce en el fichero \texttt{ml-model}, que haciendo uso de la función \texttt{train()} se encarga de coger el array de datos y entrenar al modelo para el reconocimiento, teniendo en cuenta el tipo de algoritmo utilizado.
+
+Por último, cuando el modelo ya está entrenado, dependiendo del tipo de análisis que se haya querido realizar, hace uso de los ficheros \texttt{ml-test-image-model} o \texttt{ml-test-text-model} para poder realizar pruebas.
 
 \begin{figure}
-  \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Estructura del parser básico.}\label{fig:arquitectura}
+	\centering
+	\includegraphics[width=9cm, keepaspectratio]{img/arquitectura-learningml.png}
+	\caption{Estructura de la arquitectura de \texttt{LearningML}.}\label{fig:arquitectura}
+\end{figure}
+
+\section{Cambio en la arquitectura}
+\label{sec:cambio-arquitectura}
+
+El principal cambio que debía hacer en la arquitectura era añadir un nuevo componente, \texttt{ml-test-sound-model}, así como añadir en el fichero \texttt{interfaces} los tipos que iba a utilizar, también fue necesario añadir un nuevo servicio, \texttt{feature-extractor-sound}, que se encargaría de analizar los datos de audio recibidos y extraer las características que se fueran a utilizar.
+
+El cambio en la arquitectura no fue muy complicado, ya que la aplicación estaba preparada para poder realizar cambios de esta índole sin realizar un esfuerzo muy grande.
+
+Además había que encontrar la manera de recoger el audio directamente del micrófono para su posterior análisis, para ello había dos posibilidades:
+\begin{itemize}
+	\item Utilizar el analizador de audio de Angular, que facilitaba aspectos como la introducción en el código.
+	\item Utilizar el analizador de audio de la API web, del que se obtenían los datos de una manera más sencilla.
+\end{itemize}
+
+Finalmente, me decidí por usar la API web para el audio, ya que los datos que llegaban eran más sencillos de interpretar.
+
+\section{Cambio en la interfaz}
+\label{sec:cambio-interfaz}
+
+En cuanto a la interfaz de usuario no hubo que realizar muchos cambios:
+\begin{itemize}
+	\item En el fichero \texttt{ml-home} se añadió un ''container'' para el audio, como se puede ver en la figura~\ref{fig:main-page}.
+	\item En el fichero \texttt{ml-model} bastó con añadir la etiqueta del componente \texttt{ml-test-sound-model}, además de añadir una entrada de texto que se utilizaría para pedir al usuario la duración de los audios, como se puede ver en la figura~\ref{fig:audio-page}.
+\end{itemize}
+
+Además, por supuesto, del fichero \texttt{ml-test-sound-model}, que siguiendo la estructura de los otros ficheros de test, no fue una tarea muy complicada de realizar.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/pagina-principal.png}
+	\caption{Página principal de \texttt{LearningML}.}\label{fig:main-page}
 \end{figure}
 
 \begin{figure}
-    \centering
-    \includegraphics[bb=0 0 800 600, width=12cm, keepaspectratio]{img/foro1}
-    \caption{Página con enlaces a hilos}\label{fig:_arquitectura}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/audio-model.png}
+	\caption{Página de análisis de un modelo de audio en \texttt{LearningML}.}\label{fig:audio-page}
 \end{figure}
 
- 
-Recuerda que toda figura que añadas a tu memoria debe ser explicada.
-Sí, aunque te parezca evidente lo que se ve en la figura~\ref{fig:arquitectura}, la figura en sí solamente es un apoyo a tu texto.
-Así que explica lo que se ve en la figura, haciendo referencia a la misma tal y como ves aquí.
-Por ejemplo: En la figura~\ref{fig:arquitectura} se puede ver que la estructura del \emph{parser} básico, que consta de seis componentes diferentes: los datos se obtienen de la red, y según el tipo de dato, se pasará a un \emph{parser} específico y bla, bla, bla\ldots
+\section{Componente micrófono}
+\label{sec:mic}
 
-Si utilizas una base de datos, no te olvides de incluir también un diagrama de entidad-relación.
+El componente principal, sobre el que gira toda la obtención de elementos de audio es el micrófono, este elemento se creó como un nuevo componente al que se llamó \texttt{ml-microphone}, este componente sería el encargado de recoger el audio directamente del micrófono del usuario y enviárselo al modelo para que pueda trabajar con él. La arquitectura del componente debía de ser similar a la que tenían otros componentes que hacían un trabajo similar al suyo pero para otros tipos de análisis, como \texttt{ml-web-cam} hace para el análisis de imágenes. Por tanto, había una serie de funciones que debían de aparecer:
+\begin{itemize}
+	\item Una función para activar el micrófono, \texttt{enableAudio()}.
+	\item Una función para desactivar el micrófono, \texttt{disableAudio()}.
+	\item Una función para mostrar o esconder el micrófono, \texttt{toggleMic()}.
+	\item Una función para comenzar las grabaciones, \texttt{startRecording()}.
+	\item Una función para terminar las grabaciones, \texttt{stopRecording()}.
+	\item Una función para capturar y enviar los datos obtenidos al propio modelo, \texttt{captureAudio()}.
+\end{itemize}
+
+Además debía de tener varios eventos, para indicar cuándo se cerraba el micrófono, para enviar los datos al modelo y para enviar los datos cuando se estaba probando, es decir, una vez el modelo ya estaba creado.
+
+\subsection*{enableAudio()}
+
+Es la función encargada de pedir los permisos al navegador para poder utilizar el micrófono, esto se hace mediante el siguiente código:
+
+{\footnotesize
+\begin{verbatim}
+	navigator.mediaDevices.getUserMedia({ video: false, audio: true })
+	.then((stream) => {
+		//
+	});
+\end{verbatim}
+}
+
+Después de pedir los permisos, se procede a crear todas las variables que vamos a necesitar para poder realizar el análisis de audio, teniendo en cuenta una variable booleana, \texttt{testing}, que indica si queremos capturar estos audios para test o para crear el modelo.
+
+\subsection*{disableAudio()}
+
+Es la función encargada de deshabilitar la captura de audio, para ello comienza por parar todas las posibles pistas que haya activas mediante el siguiente código:
+
+{\footnotesize
+\begin{verbatim}
+	this.localstream.getTracks().forEach((element: any) => {
+		element.stop();
+	});
+\end{verbatim}
+}
+
+Una vez se hayan detenido todas las pistas, se reinician las varibles que se habían creado en \texttt{enableAudio()}.
+
+\subsection*{startRecording()}
+
+Es la función que se encarga de comenzar a grabar, para que la grabación se realice periódicamente teniendo en cuenta el valor que haya introducido el usuario, se hace uso de la función \texttt{interval} y se realiza una subscripción. Las subscripciones se usan para que cada vez que la función \texttt{interval} devuelva un valor, se ejecute un código personalizado, escogido por el desarrollador, para este caso, simplemente se hará una llamada a la función \texttt{captureAudio()}.
+
+\subsection*{stopRecording()}
+
+Es la función encargada de terminar la grabación, para ello primero deshabilita el micrófono, haciendo una llamada a \texttt{disableAudio()}, para después limpiar el intervalo creado con la función \texttt{interval} y anular la subscripción. Por último colocará la variable \texttt{testing} en su valor original y hará uso del evento \texttt{onCloseMic} para informar que la grabación ha terminado.
+
+\subsection*{captureAudio()}
+
+Es la función más importante, ya que se encarga de recoger los datos y enviarlos.
+
+Primero se crea una fuente, haciendo uso de la función \texttt{createMediaStreamSource()} de la interfaz \texttt{AudioContext}, después se conecta esta fuente al analizador, que haciendo uso de la función \texttt{getByteFrequencyData()} guardará los datos de frecuencias obtenidos en la variable \texttt{dataArray}.
+
+Una de las pegas que puede tener este tipo de análisis es que la primera muestra siempre llega con todos los valores a cero, independientemente de si se graba o no, como que una muestra sea igual en todas las etiquetas podría confundir al modelo, después de guardar los datos en la variable \texttt{dataArray}, se comprueba si la media es cero, en el caso de que lo sea, se omite esa muestra.
+
+Después de realizar las comprobaciones pertinentes, el siguiente paso será enviar los datos, pero para ello es necesario saber si se van a enviar para test o para la creación del modelo, por ello haciendo uso de la variable booleana \texttt{testing} escogemos uno de los dos posibles eventos para enviar los datos, además en el caso de que las muestras se vayan a usar en la creación del modelo crearemos un nuevo elemento de audio para añadir al ''container'' con el resto de elementos.
+
+Finalmente, se reinician los valores de la variable \texttt{dataArray}.
+
+\section{Obtención de datos}
+\label{sec:obtencion-datos}
+
+La obtención de datos se realiza en el fichero \texttt{feature-extractor-sound}.
+
+\subsection{Extracción de datos de interés}
+\label{subsec:extraccion-datos}
+
+Para la extracción de datos de interés únicamente se introdujeron los datos obtenidos por el micrófono, pero añadir los datos en bruto tenía un problema, y es que todas las muestras tenían una larga cola de ceros al final, algo que confundía al modelo y hacía que las predicciones no fueran buenas, ver figura~\ref{fig:silvido1024}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/silvido1024.png}
+	\caption{Valores de la FFT de un silvido con 1024 muestras.}\label{fig:silvido1024}
+\end{figure}
+
+Para evitar confusiones de este estilo, los datos recibidos debían de recortarse, para omitir la larga cola de ceros y quedarse únicamente con los datos de las frecuencias que tienen valores altos. Pero la dificultad estaba en elegir bien el valor a partir del cual se iba a cortar, ya que si se cortaba demasiado pronto podrían quedarse muy pocas muestras y si se hacía demasiado tarde escoger aún una pequeña cola de ceros.
+
+Por ello, se realizaron pruebas cortando a varias longitudes, y se llegó a la conclusión de que lo mejor sería cortar por la zona media, es decir, en 512 muestras, ver figura~\ref{fig:silvido512}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/silvido512.png}
+	\caption{Valores de la FFT de un silvido con 512 muestras.}\label{fig:silvido512}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -469,10 +614,82 @@ Si utilizas una base de datos, no te olvides de incluir también un diagrama de 
 
 \cleardoublepage
 \chapter{Experimentos y validación}
+\label{chap:experimentos-validacion}
 
-Este capítulo se introdujo como requisito en 2019. 
-Describe los experimentos y casos de test que tuviste que implementar para validar tus resultados. 
-Incluye también los resultados de validación que permiten afirmar que tus resultados son correctos. 
+Para la validación de un modelo, basta con abrir el inspector en el navegador que se esté utilizando y al crear el modelo comprobar que en la consola los valores que aparecen al lado de la palabra \texttt{Accuracy} sean ceranos a uno, ya que esto indica lo que tarda en llegar a un acierto máximo, uno, en las distintas épocas por las que pasa el modelo.
+
+Un buen modelo podría tener una forma similar a la que se expone en la figura~\ref{fig:validacion}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=8cm, keepaspectratio]{img/validacion.png}
+	\caption{Validacion de un modelo.}\label{fig:validacion}
+\end{figure}
+
+\section{Voz vs Silvido vs Flauta}
+\label{sec:yo-silv-flauta}
+
+Para este experimento se buscó tres fuentes que tuvieran distinto timbre, para comprobar si la diferenciación era correcta.
+
+Se tomaron muestras de audio de:
+\begin{itemize}
+	\item Voz: bajo la etiqueta ''yo'', son muestras de audio de yo hablando.
+	\item Silvido: con la etiqueta ''silvido'' tenemos muestras de audio de un silvido.
+	\item Flauta: en la etiqueta ''flauta'' tenemos muestras del sonido de una flauta dulce con la nota do más grave.
+\end{itemize}
+
+Las muestras se recortaron para dejarlas en 512 muestras, y los resultados obtenidos se pueden observar en las imágenes~\ref{fig:silvido}, ~\ref{fig:yo} y ~\ref{fig:flauta}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/silvido512.png}
+	\caption{Valores de la FFT de un silvido con 512 muestras.}\label{fig:silvido}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/yo512.png}
+	\caption{Valores de la FFT de una persona hablando con 512 muestras.}\label{fig:yo}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/flauta512.png}
+	\caption{Valores de la FFT de una flauta con 512 muestras.}\label{fig:flauta}
+\end{figure}
+
+Las muestras se tomaron con duración de 100ms, que es la duración estándar que se decidió colocar.
+
+\section{Duracion de los audios}
+\label{sec:duracion-audio}
+
+Para comprobar cuál podría ser la duración más propicia de los audios, se hicieron varias pruebas cambiando la duración de los audios cuando se recogen las muestras. Los valores que se colocarán son los siguientes: 250ms, 500ms y 1000ms. Para esta prueba se grabó a tres personas recitando un mismo texto.
+
+Cuando el tiempo es de 250ms podemos observar que los picos se crean en valores más altos.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/locutor250ms.png}
+	\caption{Valores de la FFT con duración de 250ms.}\label{fig:locutor250ms}
+\end{figure}
+
+Cuando el tiempo es de 500ms vemos que las caídas que en la grabación de 250ms subáin rápido, se mantienen en la zona baja durante más muestras.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/locutor500ms.png}
+	\caption{Valores de la FFT con duración de 500ms.}\label{fig:locutor500ms}
+\end{figure}
+
+Cuando el tiempo es de 1000ms los picos no son tan exagerados y queda más repartido a lo largo de la gráfica.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/locutor1000ms.png}
+	\caption{Valores de la FFT con duración de 1000ms.}\label{fig:locutor1000ms}
+\end{figure}
+
+No creo que haya una elección de tiempo que sea mejor que otra, todo depende de qué se quiera grabar, por ejemplo, si vamos a grabar una nota obtenida de un instrumento de aire, será más conveniente colocar un tiempo bajo, para poder obtener más muestras en menos tiempo. Pero si por el contrario vamos a grabar a una persona recitando un poema, quizá sería más conveniente ponerle un tiempo más alto, porque si se cogen muchas muestras, la aplicación tarda mucho tiempo en ejecutarse.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -482,11 +699,37 @@ Incluye también los resultados de validación que permiten afirmar que tus resu
 
 \cleardoublepage
 \chapter{Resultados}
+\label{chap:resultados}
 
-En este capítulo se incluyen los resultados de tu trabajo fin de grado.
+\section{Notas musicales}
+\label{sec:notas-musicales-res}
 
-Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejemplos de haberla utilizado para que se vea su utilidad.
+Para comprobar si los resultados que se obtenían eran correctos, se probó la realización de un modelo que reconociese notas musicales tocadas con una flauta dulce. Se crearon para este modelo siete etiquetas, cada una correspondiente a una de las notas que tenemos en una escala en clave de sol, como se muestra en la figura~\ref{fig:pentagrama}.
 
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/pentagrama.png}
+	\caption{Pentagrama en clave de sol.}
+	\label{fig:pentagrama}
+\end{figure}
+
+La duración escogida para las muestras de audio fue de 500ms, para que se tomaran suficientes muestras en no mucho tiempo.
+
+Los resultados obtenidos fueron bastante buenos, incluso excelentes, usando redes neuronales el acierto era alto, pero aún se identificaba en porcentajes bajos como otra nota, ver figura~\ref{fig:neural-networks}, pero al cambiar el algoritmo y utilizar KNN, los resultados eran totalmente correctos, ver figura~\ref{fig:knn}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/nn1.png}
+	\caption{Reconocimiento de nota con Redes Neuronales.}
+	\label{fig:neural-networks}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/knn1.png}
+	\caption{Reconocimiento de nota con KNN.}
+	\label{fig:knn}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -497,65 +740,46 @@ Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejem
 \chapter{Conclusiones}
 \label{chap:conclusiones}
 
+Considero que el trabajo realizado ha sido bastante bueno, ya que crear un analizador de audio que no sirva únicamente para una sola función (diferenciar vocales, diferenciar notas musicales, diferenciar locutores,...) es una tarea complicada, no obstante, el resultado ha sido interesante y la funcionalidad de lo creado es bastante interesante.
 
 \section{Consecución de objetivos}
 \label{sec:consecucion-objetivos}
 
-Esta sección es la sección espejo de las dos primeras del capítulo de objetivos, donde se planteaba el objetivo general y se elaboraban los específicos.
+Al comenzar el proyecto se propusieron varios objetivos, yo creo que se han cumplido todos.
 
-Es aquí donde hay que debatir qué se ha conseguido y qué no. 
-Cuando algo no se ha conseguido, se ha de justificar, en términos de qué problemas se han encontrado y qué medidas se han tomado para mitigar esos problemas.
+En el aspecto del análisis y reorganización de la estructura de \texttt{LearningML}, se puede decir que ahora está bien organizada y que los componentes y servicios creados siguen la línea de lo que ya estaba anteriormente.
 
-Y si has llegado hasta aquí, siempre es bueno pasarle el corrector ortográfico, que las erratas quedan fatal en la memoria final.
-Para eso, en Linux tenemos aspell, que se ejecuta de la siguiente manera desde la línea de \emph{shell}:
-
-\begin{verbatim}
-  aspell --lang=es_ES -c memoria.tex
-\end{verbatim}
+Y en cuanto al análisis de las señales de audio, al final resultó más óptimo para la consecución del trabajo que no se buscaran aspectos específicos, sino que se guardaran todas las bandas de frecuencia obtenidas y se realizara la predicción basándose en esos aspectos.
 
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
 
-Aquí viene lo que has aprendido durante el Grado/Máster y que has aplicado en el TFG/TFM. Una buena idea es poner las asignaturas más relacionadas y comentar en un párrafo los conocimientos y habilidades puestos en práctica.
+En el aspecto de desarrollo web ha sido de gran ayuda tener conocimientos básicos, que pude adquirir en \textit{Construcción de Servicios y Sistemas Audiovisuales en la Web}, además para el desarrollo de aplicaciones web, pese a que no fue en Angular, sino en Django y Node.js, la asignatura de \textit{Laboratorios de Tecnologías Audiovisuales en la Web} fue de gran ayuda, ya que no se comienza de cero en el tema del uso de plantillas y lenguaje de plantillas.
 
-\begin{enumerate}
-  \item a
-  \item b
-\end{enumerate}
+También ha sido de gran utilidad el saber cómo llevar a cabo un programa de manera eficiente y limpia, esto se lo debo a \textit{Informática II}, que gracias a un lenguaje tan altamente tipado y complicado como Ada hizo que el orden tomara una posición importante a la hora de realizar cualquier programa o aplicación.
+
+Además las asignaturas de \textit{Tratamiento Digital del Sonido} y \textit{Tratamiento Digital de la Imagen} fueron de gran ayuda a la hora tanto de comprender cómo funcionaban los distintos algoritmos, como de realizar el análisis de audio, pese a que al final no se buscó ninguna de las características que podrían diferenciar un audio de otro.
 
 
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
 
-Aquí viene lo que has aprendido en el Trabajo Fin de Grado/Máster.
-
 \begin{enumerate}
-  \item Aquí viene uno.
-  \item Aquí viene otro.
+  \item Desarrollo de aplicaciones con Angular.
+  \item Análisis de audio con la API web.
+  \item Programación asíncrona.
+  \item TypeScript.
 \end{enumerate}
 
 
 \section{Trabajos futuros}
 \label{sec:trabajos_futuros}
 
-Ningún proyecto ni software se termina, así que aquí vienen ideas y funcionalidades que estaría bien tener implementadas en el futuro.
+Una de las principales carencias del análisis de audio en \texttt{LearningML} es la forma de recoger muestras de sonidos, quizá una cambio en la interfaz en ese aspecto pudiera solucionarlo. Además a la hora de realizar las pruebas, sería muy interesante no tener que parar de grabar para analizar, sino que continúe grabando una vez haya analizado y mostrado la resolución, hasta que el usuario decida parar la grabación, cambiando cada vez que se grabe una muestra el valor predicho.
 
-Es un apartado que sirve para dar ideas de cara a futuros TFGs/TFMs.
+En un aspecto similar al análisis de audio, el análisis de imágenes podría llevar un crecimiento paralelo al de audio.
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% APÉNDICE(S) %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cleardoublepage
-\appendix
-\chapter{Manual de usuario}
-\label{app:manual}
-
-Esto es un apéndice.
-Si has creado una aplicación, siempre viene bien tener un manual de usuario.
-Pues ponlo aquí.
+El \texttt{Machine Learning} no tiene límites, se puede usar para el reconocimiento de multitud de cosas, por ejemplo, una funcionalidad que permita encontrar patrones dentro de un número enorme de datos podría ser de bastante utilidad.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
