@@ -268,7 +268,7 @@ El objetivo de este proyecto consiste en implementar el reconocimiento de audio 
 
 El principal objetivo que persigue el creador de la aplicación web, Juan David Rodríguez García, es ayudar a los jóvenes, entre 12 y 16 años, a entender en qué consisten las técnicas de \textit{Machine Learning}. Para ello implementó el reconocimiento de imágenes y textos mediante el uso de redes neuronales, después se añadieron nuevos algoritmos, como KNN o Naïve Bayes.
 
-Mi objetivo en este proyecto consiste en {\bf implementar técnicas de reconocimiento de audio, siguiendo la dinámica y tratando de hacerlo de la manera más sencilla e intuitiva posible para el usuario}.
+Mi objetivo en este proyecto consiste en {\bf implementar técnicas de reconocimiento de audio, siguiendo la dinámica FIXME-¿la dinámica de qué-- y tratando de hacerlo de la manera más sencilla e intuitiva posible para el usuario}.
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
@@ -287,7 +287,7 @@ Mi objetivo en este proyecto consiste en {\bf implementar técnicas de reconocim
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
 
-La idea de empezar a realizar este proyecto surgió por Enero de 2021, pero no fue hasta mediados de Febrero de ese mismo año que comencé a buscar qué podía hacer.
+La idea de empezar a realizar este proyecto surgió por enero de 2021, pero no fue hasta mediados de febrero de ese mismo año que comencé a buscar qué podía hacer.
 
 Tras contactar con el Dr. Gregorio Robles, quien me impartió la asignatura de \textit{Protocolos para la Transmisión de Audio y Vídeo}, me propuso realizar implementaciones para esta aplicación web. Había bastantes posibilidades que poder implementar, pero finalmente me decidí por el análisis de audio, ya que era algo que tenía más cercano por haber cursado una asignatura sobre este tema en años anteriores, \textit{Tratamiento Digital del Sonido}.
 
@@ -356,9 +356,9 @@ Las dos funcionalidades básicas con las que cuenta esta aplicación son las sig
 
 Además, la aplicación permite al usuario realizar un registro, una vez realizado el registro, el usuario podrá guardar los modelos creados en la nube. En caso de no estar registrado, se permite al usuario realizar una descarga del modelo en formato JSON, de igual manera se permite también cargar un modelo creado con anterioridad.
 
-Dispone también de varios enlaces a tutoriales~\footnote{\url{https://web.learningml.org/videotutoriales/}} y al manual de usuario~\footnote{\url{https://web.learningml.org/manual-de-learningml/}} en la pestaña \texttt{Aprende}, que resulta muy útil en el caso de que sea la primera visita que se realiza a la página.
+Dispone también de varios enlaces a tutoriales\footnote{\url{https://web.learningml.org/videotutoriales/}} y al manual de usuario\footnote{\url{https://web.learningml.org/manual-de-learningml/}} en la pestaña \texttt{Aprende}, que resulta muy útil en el caso de que sea la primera visita que se realiza a la página.
 
-Por último destacar que el modelo no solo se puede importar en formato JSON, sino que también permite la exportación del modelo a \texttt{Scratch}~\footnote{\url{https://scratch.mit.edu/}}.
+Por último destacar que el modelo no solo se puede importar en formato JSON, sino que también permite la exportación del modelo a \texttt{Scratch}\footnote{\url{https://scratch.mit.edu/}}.
 
 
 \section{HTML 5} 
@@ -653,7 +653,7 @@ Por ello, se realizaron pruebas cortando a varias longitudes, y se llegó a la c
 
 Para la validación de un modelo, basta con abrir el inspector en el navegador que se esté utilizando y al crear el modelo comprobar que en la consola los valores que aparecen al lado de la palabra \texttt{Accuracy} sean cercanos a uno, ya que esto indica lo que tarda en llegar a un acierto máximo, uno, en las distintas épocas por las que pasa el modelo.
 
-Un buen modelo podría tener una forma similar a la que se expone en la figura~\ref{fig:validacion}. En esta figura podemos observar la convergencia de los valores de acierto del modelo, que comienzan con un valor bajo, en este caso, de 0.2, y que converge rápidamente alcanzando valores aceptables como son 0.8 y 0.9, hasta que finalmente llega a 1. Cada vez que llega a 1, se cambia de época, y como podemos observar a cada época, se converge más rápido a 1.
+Un buen modelo podría tener una forma similar a la que se expone en la figura~\ref{fig:validacion}. En esta figura podemos observar la convergencia de los valores de acierto del modelo, que comienzan con un valor bajo, en este caso, de 0,2, y que converge rápidamente alcanzando valores aceptables como son 0,8 y 0,9, hasta que finalmente llega a 1. Cada vez que llega a 1, se cambia de época, y como podemos observar a cada época, se converge más rápido a 1.
 
 \begin{figure}
 	\centering
