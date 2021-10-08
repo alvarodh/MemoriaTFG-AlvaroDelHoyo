@@ -309,7 +309,12 @@ Después de unos meses de búsquedas y de desarrollos que no llegaban a ninguna 
 \chapter{Estado del arte}
 \label{chap:estado}
 
-FIXME: estaría bien contar con una sección de inteligencia artificial.
+\section{Inteligencia Artificial}
+\label{sec:ia}
+
+La \texttt{Inteligencia Artificial} es la habilidad de los ordenadores para hacer actividades que normalmente requieren inteligencia humana~\cite{rouhiainen2018inteligencia}. No obstante, también podría definirse como la capacidad de analizar mediante el uso de algoritmos, aprender de los datos analizados y utilizar lo aprendido tomando decisiones similares a las que tomaría un ser humano en su lugar.
+
+El impacto que la \texttt{Inteligencia Artificial} puede tener en nuestras vidas no se limitará solo al ámbito científico, ya que bien utilizada, podría utilizarse para sustituir a los seres humanos en tareas que puedan resultar peligrosas. Además, en el ámbito empresarial, se podría obtener bastante ventaja competitiva si se pudiera ``predecir'' el futuro de una manera más o menos acertada.
 
 \section{Machine Learning}
 \label{sec:machine-learning}
@@ -317,12 +322,10 @@ FIXME: estaría bien contar con una sección de inteligencia artificial.
 El \texttt{Machine Learning}~\cite{rouhiainen2018inteligencia}, o Aprendizaje Máquina, es uno de los principales enfoques utilizados en la inteligencia artificial moderna, utiliza algoritmos para diferenciar patrones dentro de unos datos dados. Hay tres tipos de aprendizaje:
 
 \begin{itemize}
-	\item \textbf{Aprendizaje supervisado}: El usuario tiene que facilitar los datos etiquetados y organizados, indicando cómo deberían de ser las posibles nuevas entradas.
+	\item \textbf{Aprendizaje supervisado}: El usuario tiene que facilitar los datos etiquetados y organizados, indicando cómo deberían de ser las posibles nuevas entradas. Este tipo de aprendizaje es el que utiliza \texttt{LearningML}.
 	\item \textbf{Aprendizaje no supervisado}: El propio algoritmo busca la manera de etiquetar cada una de las entradas, sin tener ninguna información sobre el modelo.
 	\item \textbf{Aprendizaje por refuerzo}: El algoritmo recibe un refuerzo positivo cada vez que hace una predicción correcta, estos algoritmos mejoran con el uso.
 \end{itemize}
-
-FIXME: se debería especificar qué tipo de aprendizaje es el que encontramos en LearningML
 
 \section{LearningML}
 \label{sec:learningml}
@@ -330,7 +333,32 @@ FIXME: se debería especificar qué tipo de aprendizaje es el que encontramos en
 \texttt{LearningML} es una aplicación creada por Juan David Rodríguez García en el año 2020.\\
 Su labor consiste en facilitar la labor de los profesores dándoles una herramienta que permita explicar el \texttt{Machine Learning}, esta herramienta está concebida para alumnos de entre 12 y 16 años. Actualmente se está utilizando en ambientes educativos reales.
 
-FIXME: aquí se debería detallar algo más la aplicación, poniend alguna captura de pantalla y mostrando las funcionalidades en detalle. Nota que es importante, por lo que debería dar para una o dos páginas.
+Actualmente, dispone de dos funcionalidades básicas, así como con un un botón que permite al usuario escoger entre usar el modo básico, que únicamente muestra los resultados, y el modo avanzado, que permite cambiar el algoritmo que se quiera utilizar y algunos de los parámetros propios de cada algoritmo, además en este último modo se mostrará una gráfica con la evolución del aprendizaje que ha llevado el modelo y una matriz de confusión, para comprobar si el modelo funciona de manera correcta.
+
+Las dos funcionalidades básicas con las que cuenta esta aplicación son las siguientes:
+
+\begin{itemize}
+	\item Reconocimiento de textos: Permite encontrar patrones que ayuden a diferenciar distintos tipos de textos. Aunque también pueden utilizarse para diferenciar entre verbos y sustantivos, por ejemplo, como se muestra en la figura~\ref{fig:reconocimiento-textos}. Nótese que se ha marcado la opción de Modo Avanzado.
+	\item Reconocimiento de imágenes: Su funcionalidad consiste en ser capaz de diferenciar entre varios tipos de imágenes, es el equivalente al reconocimiento facial de los nuevos \textit{smartphones}, pero con capacidad para diferenciar no solo caras, sino también objetos, véase figura~\ref{fig:reconocimiento-imagenes}.
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/reconocimiento-textos.png}
+	\caption{Ejemplo de reconocimiento de textos, diferenciación entre verbos y sustantivos.}\label{fig:reconocimiento-textos}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/reconocimiento-imagenes.png}
+	\caption{Ejemplo de reconocimiento de imagenes, diferenciación entre mi cara, un paragüas y un telefonillo.}\label{fig:reconocimiento-imagenes}
+\end{figure}
+
+Además, la aplicación permite al usuario realizar un registro, una vez realizado el registro, el usuario podrá guardar los modelos creados en la nube. En caso de no estar registrado, se permite al usuario realizar una descarga del modelo en formato JSON, de igual manera se permite también cargar un modelo creado con anterioridad.
+
+Dispone también de varios enlaces a tutoriales~\footnote{\url{https://web.learningml.org/videotutoriales/}} y al manual de usuario~\footnote{\url{https://web.learningml.org/manual-de-learningml/}} en la pestaña \texttt{Aprende}, que resulta muy útil en el caso de que sea la primera visita que se realiza a la página.
+
+Por último destacar que el modelo no solo se puede importar en formato JSON, sino que también permite la exportación del modelo a \texttt{Scratch}~\footnote{\url{https://scratch.mit.edu/}}.
 
 
 \section{HTML 5} 
@@ -595,22 +623,22 @@ La obtención de datos se realiza en el fichero \texttt{feature-extractor-sound}
 \subsection{Extracción de datos de interés}
 \label{subsec:extraccion-datos}
 
-Para la extracción de datos de interés únicamente se introdujeron los datos obtenidos por el micrófono, pero añadir los datos en bruto tenía un problema. Y es que todas las muestras tenían una larga cola de ceros al final, algo que confundía al modelo y hacía que las predicciones no fueran buenas, véase la figura~\ref{fig:silvido1024}.
+Para la extracción de datos de interés únicamente se introdujeron los datos obtenidos por el micrófono, pero añadir los datos en bruto tenía un problema. Y es que todas las muestras tenían una larga cola de ceros al final, algo que confundía al modelo y hacía que las predicciones no fueran buenas, véase la figura~\ref{fig:silbido1024}.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=12cm, keepaspectratio]{img/silvido1024.png}
-	\caption{Valores de la FFT de un silbido con 1024 muestras.}\label{fig:silvido1024}
+	\includegraphics[width=12cm, keepaspectratio]{img/silbido1024.png}
+	\caption{Valores de la FFT de un silbido con 1024 muestras.}\label{fig:silbido1024}
 \end{figure}
 
 Para evitar confusiones de este estilo, los datos recibidos debían de recortarse, para omitir la larga cola de ceros y quedarse únicamente con los datos de las frecuencias que tienen valores altos. Pero la dificultad estaba en elegir bien el valor a partir del cual se iba a cortar, ya que si se cortaba demasiado pronto podrían quedarse muy pocas muestras y si se hacía demasiado tarde escoger aún una pequeña cola de ceros.
 
-Por ello, se realizaron pruebas cortando a varias longitudes, y se llegó a la conclusión de que lo mejor sería cortar por la zona media, es decir, en 512 muestras, como se puede observar en la figura~\ref{fig:silvido512}.
+Por ello, se realizaron pruebas cortando a varias longitudes, y se llegó a la conclusión de que lo mejor sería cortar por la zona media, es decir, en 512 muestras, como se puede observar en la figura~\ref{fig:silbido512}.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=12cm, keepaspectratio]{img/silvido512.png}
-	\caption{Valores de la FFT de un silbido con 512 muestras.}\label{fig:silvido512}
+	\includegraphics[width=12cm, keepaspectratio]{img/silbido512.png}
+	\caption{Valores de la FFT de un silbido con 512 muestras.}\label{fig:silbido512}
 \end{figure}
 
 
@@ -625,11 +653,37 @@ Por ello, se realizaron pruebas cortando a varias longitudes, y se llegó a la c
 
 Para la validación de un modelo, basta con abrir el inspector en el navegador que se esté utilizando y al crear el modelo comprobar que en la consola los valores que aparecen al lado de la palabra \texttt{Accuracy} sean cercanos a uno, ya que esto indica lo que tarda en llegar a un acierto máximo, uno, en las distintas épocas por las que pasa el modelo.
 
-Un buen modelo podría tener una forma similar a la que se expone en la figura~\ref{fig:validacion}. FIXME: desarrollar un poco más qué es lo que se puede ver en la figura.
+Un buen modelo podría tener una forma similar a la que se expone en la figura~\ref{fig:validacion}. En esta figura podemos observar la convergencia de los valores de acierto del modelo, que comienzan con un valor bajo, en este caso, de 0.2, y que converge rápidamente alcanzando valores aceptables como son 0.8 y 0.9, hasta que finalmente llega a 1. Cada vez que llega a 1, se cambia de época, y como podemos observar a cada época, se converge más rápido a 1.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=8cm, keepaspectratio]{img/validacion.png}
+	\includegraphics[width=8cm, keepaspectratio]{img/configuracion-25.png}
+	\caption{Configuracion del Modo Avanzado.}\label{fig:configuracion}
+\end{figure}
+
+Además, gracias a la opción de \textit{Modo Avanzado}, figura~\ref{fig:configuracion}, podemos escoger el porcentaje de datos que se usarán como ejemplos de validación, al cambiar estos valores, aparecen la evolución del aprendizaje, ver figura~\ref{fig:learning-evolution}, y la matriz de confusión, figura~\ref{fig:matriz-confusion}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=8cm, keepaspectratio]{img/learning-evolution-25.png}
+	\caption{Evolución del aprendizaje con un valor del 25\% de ejemplos de validación.}\label{fig:learning-evolution}
+\end{figure}
+
+La gráfica de la evolución del aprendizaje nos muestra, quizá de una manera más intuitiva que la figura~\ref{fig:validacion}, el cambio que ha llevado el modelo en cuanto a acierto y error a lo largo de las épocas que se hayan escogido en la configuración del modelo, ver figura~\ref{fig:configuracion}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=8cm, keepaspectratio]{img/confusion-matrix-25.png}
+	\caption{Matriz de confusión con un valor del 25\% de ejemplos de validación.}\label{fig:matriz-confusion}
+\end{figure}
+
+La matriz de confusión nos explica en forma de tabla los datos que predice y los que son en realidad. En tonos morados tenemos un mayor valores más altos de ese acontecimiento, por lo que un modelo bien realizado debería de tener la diagonal principal en tonos morados, y el resto en tonos azulados.
+
+%FIXME: desarrollar un poco más qué es lo que se puede ver en la figura.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=8cm, keepaspectratio]{img/accuracy2.png}
 	\caption{Validación de un modelo.}\label{fig:validacion}
 \end{figure}
 
@@ -645,14 +699,17 @@ Se tomaron muestras de audio de:
 	\item Flauta: en la etiqueta ``flauta'' tenemos muestras del sonido de una flauta dulce con la nota do más grave.
 \end{itemize}
 
-Las muestras se recortaron para dejarlas en 512 muestras, y los resultados obtenidos se pueden observar en las figuras~\ref{fig:silvido},~\ref{fig:yo} y~\ref{fig:flauta}. 
-FIXME: explicar algo más en detalle qué se ve en cada una de las figuras
+Las muestras se tomaron con duración de 1000ms, que es la duración estándar que se decidió colocar. Después se recortaron para dejarlas en 512 muestras, y los resultados obtenidos se pueden observar en las figuras~\ref{fig:silbido},~\ref{fig:yo} y~\ref{fig:flauta}.
+
+%FIXME: explicar algo más en detalle qué se ve en cada una de las figuras
 
 \begin{figure}
 	\centering
-	\includegraphics[width=12cm, keepaspectratio]{img/silvido512.png}
-	\caption{Valores de la FFT de un silbido con 512 muestras.}\label{fig:silvido}
+	\includegraphics[width=12cm, keepaspectratio]{img/silbido512.png}
+	\caption{Valores de la FFT de un silbido con 512 muestras.}\label{fig:silbido}
 \end{figure}
+
+En la figura~\ref{fig:silbido} podemos observar un pico bastante alto en las frecuencias bajas y algún armónico, hasta que acaba tendiendo a cero en una zona muy cercana al inicio dela gráfica.
 
 \begin{figure}
 	\centering
@@ -660,13 +717,16 @@ FIXME: explicar algo más en detalle qué se ve en cada una de las figuras
 	\caption{Valores de la FFT de una persona hablando con 512 muestras.}\label{fig:yo}
 \end{figure}
 
+En la figura~\ref{fig:yo} observamos que la caída de valores a lo largo de la gráfica es menor, con más subidas y bajadas y picos más exagerados, tiende a cero en las frecuencias finales, que son las que se omiten.
+
 \begin{figure}
 	\centering
 	\includegraphics[width=12cm, keepaspectratio]{img/flauta512.png}
 	\caption{Valores de la FFT de una flauta con 512 muestras.}\label{fig:flauta}
 \end{figure}
 
-Las muestras se tomaron con duración de 100ms, que es la duración estándar que se decidió colocar.
+En la figura~\ref{fig:flauta} se puede observar de una manera muy clara los distintos armónicos que podemos diferenciar en un sonido musical. Los picos son bastante claros, y finalmente acaba tendiendo a cero, pero unas muestras más tarde de lo que lo hace la figura~\ref{fig:silbido} y antes de lo que lo hará la figura~\ref{fig:yo}.
+
 
 \section{Duración de los audios}
 \label{sec:duracion-audio}
@@ -725,20 +785,79 @@ La duración escogida para las muestras de audio fue de 500ms, para que se tomar
 
 \begin{figure}
 	\centering
-	\includegraphics{img/nn1.png}
+	\includegraphics[width=12cm]{img/nn1.png}
 	\caption{Reconocimiento de nota con Redes Neuronales.}\label{fig:neural-networks}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics{img/knn1.png}
+	\includegraphics[width=12cm]{img/knn1.png}
 	\caption{Reconocimiento de nota con KNN.}\label{fig:knn}
 \end{figure}
 
-Los resultados obtenidos fueron bastante buenos, incluso excelentes, usando redes neuronales el acierto era alto, pero aún se identificaba en porcentajes bajos como otra nota, véase la figura~\ref{fig:neural-networks}. Sin embargo al cambiar el algoritmo y utilizar KNN, los resultados son correctos, como se puede observar en la figura~\ref{fig:knn}. FIXME: detallar más por qué eso es así a partir de lo que se ve en la figura.
+Los resultados obtenidos fueron bastante buenos, incluso excelentes, usando redes neuronales el acierto era alto, pero aún se identificaba en porcentajes bajos como otra nota, véase la figura~\ref{fig:neural-networks}. Sin embargo al cambiar el algoritmo y utilizar KNN, los resultados son correctos, como se puede observar en la figura~\ref{fig:knn}.
 
+Para comprender por qué se reconoce mejor mediante el uso del algoritmo de KNN que de Redes Neuronales, hay que hacer hincapié en cómo hacen la predicción cada uno delos algoritmos:
 
+\section*{Redes Neuronales}
+\label{sec:neural-networks}
 
+El algoritmo de redes neuronales (\textit{neural networks})~\cite{izaurieta2000redes} trata de emular las conexiones que se realizan en el cerebro a la hora de tomar decisiones. Se trata de un algoritmo complicado, pero muy efectivo.
+
+Cada uno de los nodos de la figura~\ref{fig:neural-networks-diagram} representa una neurona, y diferenciadas por colores tenemos las neuronas pertenecientes a cada una de las capas que conforman el algoritmo.
+
+La primera capa, se encarga de analizar las características de los datos de entrada y repartirlos en función del resultado obtenido al pasarse por una función asignada a cada una de las neuronas. Este resultado se conoce como peso sináptico, y se usa para definir la importancia relativa de cada una de las entradas.
+
+En la segunda capa, o capa oculta, el algoritmo continúa asignando pesos a cada una de las características, las capas ocultas pueden variar de tamaño, desde una o dos capas de neuronas, hasta cientos o miles de capas. Del tamaño de esta capa dependerá el tiempo que tarde en clasificarse el dato.
+
+La última capa, o capa de salida, es la que se encarga de devolver el dato ya clasificado dentro de una etiqueta
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm]{img/neutral-network-diagram.png}
+	\caption{Diagrama del algoritmo Redes Neuronales.}\label{fig:neural-networks-diagram}
+\end{figure}
+
+\section*{KNN}
+\label{sec:knn}
+
+El algoritmo de k vecinos más cercanos (\textit{k-nearest neighbors}), conocido como \texttt{KNN}~\cite{tikariha2018comparative} es un modelo estadístico de reconocimiento supervisado de patrones.
+
+Al comenzar, el algoritmo coloca los datos de entrenamiento en una dimensión de tamaño igual al número de características de cada dato. Después coloca el dato a clasificar en la misma dimesión, y escoge los k puntos más cercanos, teniendo en cuenta la etiqueta de cada uno de esos puntos, identifica el dato como perteneciente a esa clase. Para evitar empates entre etiquetas, los valores de k suelen ser bajos e impares.
+
+La figura~\ref{fig:knn-diagram} expone un ejemplo de clasificación de un dato con dos características. Escogiendo una k con valor de 3, el algoritmo clasficaría el dato como perteneciente a la clase B, pero si cambiamos el valor de k de 3 a 7, el dato quedaría clasificado como clase A.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm]{img/knn-diagram.png}
+	\caption{Diagrama del algoritmo KNN.}\label{fig:knn-diagram}
+\end{figure}
+
+\pagebreak
+
+Conociendo cómo funcionan ambos algoritmos y sabiendo que tenemos un total de 512 características, que es la longitud del vector de datos que se introduce, ¿por qué KNN predice de una manera más acertada que el algoritmo de redes neuronales?
+
+En las figuras~\ref{fig:do} y~\ref{fig:si} podemos observar respectivamente las notas \textit{do} y \textit{si}, la más grave y la más aguda dentro de la escala escogida.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm]{img/do.png}
+	\caption{FFT de la nota do.}\label{fig:do}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm]{img/si.png}
+	\caption{FFT de la nota si.}\label{fig:si}
+\end{figure}
+
+Observando los distintos armónicos dentro de cada una de las gráficas y sabiendo que cada una de las muestras es una característica a analizar, con KNN la diferenciación entre estas dos notas se podría ver de una manera sencilla.
+
+Los picos que podemos observar en la figura~\ref{fig:do} son mucho más numerosos y están más estilados que los que podemos observar en la figura~\ref{fig:si}, que forman picos pero con una caída mucho menor que las de la otra nota.
+
+Por tanto, KNN sería el algoritmo más adecuado para diferenciar estas notas musicales, gracias a la forma que tienen ambas.
+
+%FIXME: detallar más por qué eso es así a partir de lo que se ve en la figura.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -773,15 +892,28 @@ Además las asignaturas de \textit{Tratamiento Digital del Sonido} y \textit{Tra
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
 
-FIXME: desarrolla estos puntos, que no quede como una lista.
+%FIXME: desarrolla estos puntos, que no quede como una lista.
+\section*{Desarrollo de aplicaciones con Angular.}
 
-\begin{enumerate}
-  \item Desarrollo de aplicaciones con Angular.
-  \item Análisis de audio con la API web.
-  \item Programación asíncrona.
-  \item TypeScript.
-\end{enumerate}
+Angular es un \texttt{framework} que me ha parecido de lo más útil, al menos para el desarrollo de aplicaciones web. La construcción de la aplicación se hace de una manera muy sencilla, gracias al comando \texttt{ng new [nombre-app]}, que permite crear el esqueleto completo de la aplicación, ahorrando mucho tiempo al comienzo. De igual manera, la creación de componentes, servicios y demás, hacen de Angular una herramienta muy útil.
 
+\section*{Análisis de audio con la API web.}
+
+Pese a que en el inicio fue complicado conseguir introducirlo dentro de la aplicación, la API web de audio proporciona unas herramientas que pueden resultar muy útiles, ya no solo a la hora de realizar tareas como esta, sino para editar \textit{streams} de audio.
+
+El uso de la interfaz de \texttt{AudioContext} en principio pudo suponer un problema, pero una vez se comprende el funcionamiento y las posibilidades que ofrece, ves que el tratamiento de audio en la web se vuelve relativamente sencillo.
+
+\section*{Programación asíncrona.}
+
+Al comenzar el proyecto conocía lo que era la programación asíncrona, pero no sabía de qué forma implementarla, ni las facilidades que ésta podía acarrear.
+
+Después de investigar y hacer multitud de pruebas, creo que puedo decir con certeza que es una de las cosas que más me alegro de haber aprendido, por la cantidad de posibilidades que abre dentro del desarrollo de una aplicación que funciona en tiempo real.
+
+\section*{TypeScript.}
+
+Al estar basado en \texttt{JavaScript} no me resultó excesivamente complicado de comprender la sintaxis que ofrecía, pese a que tiene algunos cambios respecto de su lenguaje padre, son cambios que son sencillos e intuitivos.
+
+Por tanto, \texttt{TypeScript} me parece un lenguaje muy útil, ya que toma todas las cosas buenas de \texttt{JavaScript} y fortalece los puntos débiles que tuviera este lenguaje.
 
 \section{Trabajos futuros}
 \label{sec:trabajos_futuros}
