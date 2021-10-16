@@ -442,7 +442,7 @@ Esta arquitectura tiene varias ventajas sobre otro tipo de arquitecturas del mis
 \section{TensorFlow}
 \label{sec:tensorflow}
 
-\texttt{TensorFlow}~\cite{tensorflow} es un sistema de aprendizaje automático creado por \textit{Google Brain}, es una plataforma que permite construir y entrenar redes neuronales de una manera muy eficiente y completa.. En 2015 \texttt{TensorFlow} pasó a ser \textit{software libre}, por lo que todo el mundo podría utilizarlo en sus aplicaciones, así como editarla siempre que fuera necesario.
+\texttt{TensorFlow}~\cite{tensorflow} es un sistema de aprendizaje automático creado por \textit{Google Brain}, es una plataforma que permite construir y entrenar redes neuronales de una manera muy eficiente y completa.. En 2015 \texttt{TensorFlow} pasó a ser \textit{software libre}, por lo que todo el mundo puede utilizarlo en sus aplicaciones, así como modificarlo siempre que fuera necesario.
 
 \subsection{MobileNets}
 \label{subsec:mobilenets}
@@ -465,13 +465,13 @@ Las operaciones de audio básicas están dentro de un \texttt{AudioContext} y se
 
 Un proyecto simple usando esta herramienta tendría la siguiente forma:
 
-\begin{itemize}
-	\item 1. Crear contexto de audio.
-	\item 2. Dentro del contexto, se crean fuentes.
-	\item 3. Se crean nodos de efectos, como reverberación, filtro biquad, panoramizador, compresor...
-	\item 4. Elegir el destino final del audio, por ejemplo, los altavoces.
-	\item 5. Conecte las fuentes a los efectos y los efectos al destino.
-\end{itemize}
+\begin{enumerate}
+	\item Crear contexto de audio.
+	\item Dentro del contexto, se crean fuentes.
+	\item Se crean nodos de efectos, como reverberación, filtro biquad, panoramizador, compresor...
+	\item Elegir el destino final del audio, por ejemplo, los altavoces.
+	\item Conecte las fuentes a los efectos y los efectos al destino.
+\end{enumerate}
 
 \begin{figure}
 	\centering
@@ -481,7 +481,7 @@ Un proyecto simple usando esta herramienta tendría la siguiente forma:
 
 No obstante, en este proyecto no se crearon nodos de efecto, ya que los datos que se necesitaban eran los datos en bruto.
 
-Para obtener los datos se usó la interfaz de \texttt{AnalyserNode}~\cite{analyser-node}, en específico la función \texttt{getByteFrequencyData()}, que guarda los datos obtenidos en frecuencia en un array previamente creado.
+Para obtener los datos se usó la interfaz de \texttt{AnalyserNode}~\cite{analyser-node}, en particular la función \texttt{getByteFrequencyData()}, que guarda los datos obtenidos en frecuencia en un array previamente creado.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -509,7 +509,7 @@ Por último, cuando el modelo ya está entrenado, dependiendo del tipo de análi
 
 \begin{figure}
 	\centering
-	\includegraphics[width=9cm, keepaspectratio]{img/arquitectura-learningml.png}
+	\includegraphics[width=11cm, keepaspectratio]{img/arquitectura-learningml.png}
 	\caption{Estructura de la arquitectura de \texttt{LearningML}.}\label{fig:arquitectura}
 \end{figure}
 
@@ -541,13 +541,13 @@ Además, por supuesto, del fichero \texttt{ml-test-sound-model}, que siguiendo l
 
 \begin{figure}
 	\centering
-	\includegraphics[width=12cm, keepaspectratio]{img/pagina-principal.png}
+	\includegraphics[width=15cm, keepaspectratio]{img/pagina-principal.png}
 	\caption{Página principal de \texttt{LearningML}.}\label{fig:main-page}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=12cm, keepaspectratio]{img/audio-model.png}
+	\includegraphics[width=15cm, keepaspectratio]{img/audio-model.png}
 	\caption{Página de análisis de un modelo de audio en \texttt{LearningML}.}\label{fig:audio-page}
 \end{figure}
 
@@ -657,7 +657,7 @@ Un buen modelo podría tener una forma similar a la que se expone en la figura~\
 
 \begin{figure}
 	\centering
-	\includegraphics[width=8cm, keepaspectratio]{img/configuracion-25.png}
+	\includegraphics[width=10cm, keepaspectratio]{img/configuracion-25.png}
 	\caption{Configuracion del Modo Avanzado.}\label{fig:configuracion}
 \end{figure}
 
@@ -665,7 +665,7 @@ Además, gracias a la opción de \textit{Modo Avanzado}, figura~\ref{fig:configu
 
 \begin{figure}
 	\centering
-	\includegraphics[width=8cm, keepaspectratio]{img/learning-evolution-25.png}
+	\includegraphics[width=10cm, keepaspectratio]{img/learning-evolution-25.png}
 	\caption{Evolución del aprendizaje con un valor del 25\% de ejemplos de validación.}\label{fig:learning-evolution}
 \end{figure}
 
@@ -673,7 +673,7 @@ La gráfica de la evolución del aprendizaje nos muestra, quizá de una manera m
 
 \begin{figure}
 	\centering
-	\includegraphics[width=8cm, keepaspectratio]{img/confusion-matrix-25.png}
+	\includegraphics[width=10cm, keepaspectratio]{img/confusion-matrix-25.png}
 	\caption{Matriz de confusión con un valor del 25\% de ejemplos de validación.}\label{fig:matriz-confusion}
 \end{figure}
 
@@ -683,7 +683,7 @@ La matriz de confusión nos explica en forma de tabla los datos que predice y lo
 
 \begin{figure}
 	\centering
-	\includegraphics[width=8cm, keepaspectratio]{img/accuracy2.png}
+	\includegraphics[width=10cm, keepaspectratio]{img/accuracy2.png}
 	\caption{Validación de un modelo.}\label{fig:validacion}
 \end{figure}
 
@@ -785,13 +785,13 @@ La duración escogida para las muestras de audio fue de 500ms, para que se tomar
 
 \begin{figure}
 	\centering
-	\includegraphics[width=12cm]{img/nn1.png}
+	\includegraphics[width=14cm]{img/nn1.png}
 	\caption{Reconocimiento de nota con Redes Neuronales.}\label{fig:neural-networks}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=12cm]{img/knn1.png}
+	\includegraphics[width=14cm]{img/knn1.png}
 	\caption{Reconocimiento de nota con KNN.}\label{fig:knn}
 \end{figure}
 
@@ -865,13 +865,13 @@ Para una última comprobación, se probó a dar la herramienta a tres alumnas de
 Antes de dejar que probaran la aplicación, se les plantearon dos preguntas:
 
 \begin{itemize}
-	\item ¿Qué es la \texttt{Inteligencia Artificial}?~ Ninguna de las tres alumnas escogidas supo responder correctamente la pregunta, no obstante, elaboraron una definición algo cercana a lo que se podía esperar: ``Es la capacidad de un ordenador de hacer cosas que podríamos hacer nosotras'', dijeron al final.
-	\item ¿Qué es el \texttt{Machine Learning}?~ De nuevo, no supieron definir bien qué podía ser el \texttt{Machine Learning}, aún así, consiguieron elaborar una respuesta, simplemente traduciendo de manera literal: ``Aprender máquina, o sea hacer que un ordenador aprenda cosas nuevas'', fue su respuesta final.
+	\item ¿Qué es la \texttt{Inteligencia Artificial}?~ Ninguna de las tres alumnas escogidas supo responder correctamente la pregunta. No obstante, elaboraron una definición algo cercana a lo que se podía esperar: ``Es la capacidad de un ordenador de hacer cosas que podríamos hacer nosotras'', dijeron al final.
+	\item ¿Qué es el \texttt{Machine Learning}?~ De nuevo, no supieron definir bien qué podía ser el \texttt{Machine Learning}. Aun así, consiguieron elaborar una respuesta, simplemente traduciendo de manera literal: ``Aprender máquina, o sea hacer que un ordenador aprenda cosas nuevas'' fue su respuesta final.
 \end{itemize}
 
 Después de una breve explicación sobre el funcionamiento de la aplicación, redes neuronales y KNN, se les dio vía libre para que ``jugaran'' con la herramienta. Es cierto que al principio no fueron capaces de verle la utilidad, pero según iba pasando el tiempo, cada vez hacían experimentos más interesantes.
 
-Uno de los que más me llamó la atención fue la idea de reconocer partes de canciones, aumentando la duración de los audios a 2000ms, grabaron el principio de tres canciones, que se reprodujeron desde el móvil. Si bien el resultado no salía correcto al 100\%, es cierto que la herramienta acertó en un porcentaje bastante aceptable.
+Uno de los que más me llamó la atención fue la idea de reconocer partes de canciones, aumentando la duración de los audios a 2000ms. Grabaron el principio de tres canciones, que se reprodujeron desde el móvil. Si bien el resultado no salía correcto al 100\%, es cierto que la herramienta acertó en un porcentaje bastante aceptable.
 
 Otro experimento que se les ocurrió fue, pensando en \texttt{Alexa}, enseñar a la herramienta a reconocer palabras. Para ponerse a ello pensaron en palabras que pudieran decir en un segundo, y poniendo el tiempo de grabación en 1000ms, iban alternándose para decir la palabra en cuestión. Escogieron tres palabras: silla, pan y mesa. Los resultados obtenidos en esta parte fueron buenos. Además de que dejó sorprendidas a las alumnas en cuestión.
 
@@ -893,6 +893,7 @@ Además, se les planteó una última pregunta:
 En conclusión, creo que fue una buena experiencia para ellas, que aprendieron algo nuevo y, sobre todo, pasaron un buen rato, aprendiendo entre risas, que al final es el objetivo que se persigue con esta aplicación.
 
 %FIXME: detallar más por qué eso es así a partir de lo que se ve en la figura.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
