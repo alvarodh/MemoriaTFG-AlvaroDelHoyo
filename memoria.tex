@@ -268,7 +268,7 @@ El objetivo de este proyecto consiste en implementar el reconocimiento de audio 
 
 El principal objetivo que persigue el creador de la aplicación web, Juan David Rodríguez García, es ayudar a los jóvenes, entre 12 y 16 años, a entender en qué consisten las técnicas de \textit{Machine Learning}. Para ello implementó el reconocimiento de imágenes y textos mediante el uso de redes neuronales, después se añadieron nuevos algoritmos, como KNN o Naïve Bayes.
 
-Mi objetivo en este proyecto consiste en {\bf implementar técnicas de reconocimiento de audio, siguiendo la dinámica de los otros algoritmos de reconocimiento (imágenes y texto) y tratando de hacerlo de la manera más sencilla e intuitiva posible para el usuario}.
+Mi objetivo en este proyecto consiste en implementar técnicas de reconocimiento de audio, siguiendo la dinámica de los otros algoritmos de reconocimiento (imágenes y texto) y tratando de hacerlo de la manera más sencilla e intuitiva posible para el usuario.
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
@@ -856,6 +856,41 @@ Observando los distintos armónicos dentro de cada una de las gráficas y sabien
 Los picos que podemos observar en la figura~\ref{fig:do} son mucho más numerosos y están más estilizados que los que podemos observar en la figura~\ref{fig:si}, que forman picos pero con una caída mucho menor que las de la otra nota.
 
 Por tanto, KNN sería el algoritmo más adecuado para diferenciar estas notas musicales, gracias a la forma que tienen ambas.
+
+\section{Prueba con alumnos de instituto.}
+\label{sec:prueba}
+
+Para una última comprobación, se probó a dar la herramienta a tres alumnas de 2º de la ESO, de 13 años, y dejar que probaran su funcionalidad.
+
+Antes de dejar que probaran la aplicación, se les plantearon dos preguntas:
+
+\begin{itemize}
+	\item ¿Qué es la \texttt{Inteligencia Artificial}?~ Ninguna de las tres alumnas escogidas supo responder correctamente la pregunta, no obstante, elaboraron una definición algo cercana a lo que se podía esperar: ``Es la capacidad de un ordenador de hacer cosas que podríamos hacer nosotras'', dijeron al final.
+	\item ¿Qué es el \texttt{Machine Learning}?~ De nuevo, no supieron definir bien qué podía ser el \texttt{Machine Learning}, aún así, consiguieron elaborar una respuesta, simplemente traduciendo de manera literal: ``Aprender máquina, o sea hacer que un ordenador aprenda cosas nuevas'', fue su respuesta final.
+\end{itemize}
+
+Después de una breve explicación sobre el funcionamiento de la aplicación, redes neuronales y KNN, se les dio vía libre para que ``jugaran'' con la herramienta. Es cierto que al principio no fueron capaces de verle la utilidad, pero según iba pasando el tiempo, cada vez hacían experimentos más interesantes.
+
+Uno de los que más me llamó la atención fue la idea de reconocer partes de canciones, aumentando la duración de los audios a 2000ms, grabaron el principio de tres canciones, que se reprodujeron desde el móvil. Si bien el resultado no salía correcto al 100\%, es cierto que la herramienta acertó en un porcentaje bastante aceptable.
+
+Otro experimento que se les ocurrió fue, pensando en \texttt{Alexa}, enseñar a la herramienta a reconocer palabras. Para ponerse a ello pensaron en palabras que pudieran decir en un segundo, y poniendo el tiempo de grabación en 1000ms, iban alternándose para decir la palabra en cuestión. Escogieron tres palabras: silla, pan y mesa. Los resultados obtenidos en esta parte fueron buenos. Además de que dejó sorprendidas a las alumnas en cuestión.
+
+Ya habiendo probado el reconocimiento de sonido, decidieron probar el reconocimiento de imágenes, que ciertamente les resultó más entretenido, en resumen: les gusta saber quién se parece más a quién.
+
+Para finalizar el experimento, se les volvió a repetir las mismas preguntas. En esta ocasión las respuestas fueron más concisas y acertadas:
+
+\begin{itemize}
+	\item ¿Qué es la \texttt{Inteligencia Artificial}?~ A lo que respondieron: ``La capacidad de las máquinas de hacer cosas que sólo podríamos hacer los seres humanos'', una definición bastante acertada a mi parecer.
+	\item ¿Qué es el \texttt{Machine Learning}?~ Su respuesta fue: ``Es como una parte de la \texttt{Inteligencia Artificial}, como la más importante'', mejorando con esta respuesta su definición anterior.
+\end{itemize}
+
+Además, se les planteó una última pregunta:
+
+\begin{itemize}
+	\item ¿Para qué se podría utilizar el \texttt{Machine Learning}? Sus respuestas a esta pregunta fueron fascinantes, ya que les hizo pensar y dedujeron que todos los móviles funcionan usando, de alguna manera, el \texttt{Machine Learning}, ya sea para el reconocimiento facial o el dactilar o incluso los anuncios que aparecen en las redes sociales. También propusieron ideas, como la de usar el reconocimiento facial para buscar a ``gente mala'' mediante cámaras de comercios o lugares públicos.
+\end{itemize}
+
+En conclusión, creo que fue una buena experiencia para ellas, que aprendieron algo nuevo y, sobre todo, pasaron un buen rato, aprendiendo entre risas, que al final es el objetivo que se persigue con esta aplicación.
 
 %FIXME: detallar más por qué eso es así a partir de lo que se ve en la figura.
 
