@@ -869,13 +869,31 @@ Antes de dejar que probaran la aplicación, se les plantearon dos preguntas:
 	\item ¿Qué es el \texttt{Machine Learning}?~ De nuevo, no supieron definir bien qué podía ser el \texttt{Machine Learning}. Aun así, consiguieron elaborar una respuesta, simplemente traduciendo de manera literal: ``Aprender máquina, o sea hacer que un ordenador aprenda cosas nuevas'' fue su respuesta final.
 \end{itemize}
 
-Después de una breve explicación sobre el funcionamiento de la aplicación, redes neuronales y KNN, se les dio vía libre para que ``jugaran'' con la herramienta. Es cierto que al principio no fueron capaces de verle la utilidad, pero según iba pasando el tiempo, cada vez hacían experimentos más interesantes.
+Después de una breve explicación sobre el funcionamiento de la aplicación usando algunos de los ejemplos de prueba que se han descrito antes, ver sección~\ref{sec:notas-musicales-res} y capítulo~\ref{chap:experimentos-validacion} y creando un ejemplo nuevo en el momento para el reconocimiento de vocales, ver figuras~\ref{fig:reconocimiento-vocales-nn} y~\ref{fig:reconocimiento-vocales-knn}, así como una breve teoría del funcionamiento de las redes neuronales y KNN, ver capítulo~\ref{sec:notas-musicales-res}, y del significado de la matriz de confusión y de la tabla de evolución de aprendizaje, ver sección~\ref{chap:experimentos-validacion} y figuras~\ref{fig:learning-evolution} y~\ref{fig:matriz-confusion}, se les dio vía libre para que ``jugaran'' con la herramienta. Es cierto que al principio no fueron capaces de verle la utilidad, pero según iba pasando el tiempo, cada vez hacían experimentos más interesantes.
 
-Uno de los que más me llamó la atención fue la idea de reconocer partes de canciones, aumentando la duración de los audios a 2000ms. Grabaron el principio de tres canciones, que se reprodujeron desde el móvil. Si bien el resultado no salía correcto al 100\%, es cierto que la herramienta acertó en un porcentaje bastante aceptable.
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm]{img/vocales-nn.png}
+	\caption{Reconocimiento de vocales con redes neuronales.}\label{fig:reconocimiento-vocales-nn}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm]{img/vocales-knn.png}
+	\caption{Reconocimiento de vocales con KNN.}\label{fig:reconocimiento-vocales-knn}
+\end{figure}
+
+Los primeros experimentos se basaron en emular el de las notas musicales, con una flauta dulce que tenían de la asignatura de música que imparten en el instituto, pero decidieron cambiar las notas a analizar, e incluso aumentaron el tiempo de grabación para coger alguna parte de una canción que sabían tocar, pese a que el ruido de fondo era alto y no era fácil diferenciar los extractos de canción, la aplicación funcionó de una manera bastante acertada.
+
+En el siguiente experimento plantearon la posibilidad de reconocer partes de canciones, aumentando la duración de los audios a 2000ms. Grabaron el principio de tres canciones, que se reprodujeron desde el móvil. Si bien el resultado no salía correcto al 100\%, porque únicamente se recogía una muestra muy larga, es cierto que la herramienta acertó en un porcentaje bastante aceptable.
+
+Este último experimento les ayudó a comprender que la herramienta funciona mejor a cuantas más muestras se le facilite, en ese momento les pedí que me explicaran por qué creían que no funcionaba bien cuando tenía pocas muestras, a lo que respondieron: ``Si no se le enseña bien, no puede saberlo todo, ¿no?''. \\En este momento me decidí por explicarles los distintos tipos de aprendizaje que presenta el \texttt{Machine Learning}, ver sección~\ref{sec:machine-learning}, así como el tipo de aprendizaje con el que cuenta la aplicación.
 
 Otro experimento que se les ocurrió fue, pensando en \texttt{Alexa}, enseñar a la herramienta a reconocer palabras. Para ponerse a ello pensaron en palabras que pudieran decir en un segundo, y poniendo el tiempo de grabación en 1000ms, iban alternándose para decir la palabra en cuestión. Escogieron tres palabras: silla, pan y mesa. Los resultados obtenidos en esta parte fueron buenos. Además de que dejó sorprendidas a las alumnas en cuestión.
 
 Ya habiendo probado el reconocimiento de sonido, decidieron probar el reconocimiento de imágenes, que ciertamente les resultó más entretenido, en resumen: les gusta saber quién se parece más a quién.
+
+Para probar la funcionalidad del reconocimiento de texto se les pidió que pensaran en palabras y las agrupasen, para esto pensaron en diferenciar entre singulares y plurales, una idea interesante a mi parecer, para ello colocaron varias palabras en singular y plural en dos etiquetas diferentes, después probaron con palabras distintas a las que se habían escogido, el resultado como cabía esperar fue bueno, tanto usando KNN como con redes neuronales.
 
 Para finalizar el experimento, se les volvió a repetir las mismas preguntas. En esta ocasión las respuestas fueron más concisas y acertadas:
 
