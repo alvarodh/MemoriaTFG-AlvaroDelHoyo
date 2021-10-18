@@ -620,10 +620,32 @@ Finalmente, se reinician los valores de la variable \texttt{dataArray}.
 
 La obtención de datos se realiza en el fichero \texttt{feature-extractor-sound}.
 
+\subsection{Intercambio de datos entre componentes}
+\label{subsec:intercambio-datos}
+
+Llegado el momento del envío de los datos desde el fichero \texttt{ml-microphone-component} hacia \texttt{feature-extractor-sound}, se produjo uno de los primeros problemas que se deberían solucionar: el intercambio de datos entre componentes, la función que se encargará de controlar este intercambio será \textit{extractInstanceFeatures}.
+
+Este intercambio se realiza mediante eventos, los eventos se encargan de ``emitir'' una trama de datos desde un componente a otro, en este intercambio lo ideal hubiera sido que la muestra se enviara tal como se recoge, es decir un array de dos dimensiones con los datos como números enteros, pero al hacer el envío de esa manera la aplicación únicamente reconocía una muestra, para evitar este error se decidió crear un tipo determinado para las muestras: el tipo \texttt{AudioData}. Después de varias pruebas, cambiando el tipo de dato desde el array de números enteros inicial hasta un objeto en \texttt{JSON} con una estructura determinada, se llegó a la conclusión de que lo más óptimo era convertir el array en una cadena de caracteres, \texttt{string}, para su posterior envío.
+
+Una vez se había realizado el envío, y se comprobó que el número de muestras crecía, hubo que enfrentarse al siguiente problema: el análisis de los datos recibidos.
+
+\subsection{Análisis de datos}
+\label{subsec:analisis-datos}
+
+Este análisis podía acarrear algún problema, ya que los datos llegaban como una cadena de caracteres, pero para la predicción y la extracción de características era necesario que los datos fueran de nuevo un array de números enteros, para convertir la cadena de caracteres en un array de números enteros se decidió crear una nueva función que se encargaría de hacerlo: \textit{string2number}, que recibiría la cadena de caracteres y devolvería un tensor de una dimensión con los datos convertidos.
+
+Con el problema del intercambio de datos solucionado, el siguiente paso consistía en analizar de manera correcta e inequívoca los datos. Para ello primero se decidió pasar por una ventana de Hamming el array de datos, la ventana de Hamming se utiliza para realizar filtrados en señales de audio, dando una menor importancia a los datos del principio y del final de la muestra y haciendo que los datos de la zona intermedia tomen una mayor importancia.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/hamming-window.png}
+	\caption{Ventana de Hamming.}\label{fig:hamming-window}
+\end{figure}
+
 \subsection{Extracción de datos de interés}
 \label{subsec:extraccion-datos}
 
-Para la extracción de datos de interés únicamente se introdujeron los datos obtenidos por el micrófono, pero añadir los datos en bruto tenía un problema. Y es que todas las muestras tenían una larga cola de ceros al final, algo que confundía al modelo y hacía que las predicciones no fueran buenas, véase la figura~\ref{fig:silbido1024}.
+Para la extracción de datos de interés únicamente se introdujeron los datos obtenidos por el micrófono y filtrados por la ventana de Hamming, pero añadir los datos tenía un problema. Y es que todas las muestras tenían una larga cola de ceros al final, algo que confundía al modelo y hacía que las predicciones no fueran buenas, véase la figura~\ref{fig:silbido1024}.
 
 \begin{figure}
 	\centering
@@ -631,7 +653,7 @@ Para la extracción de datos de interés únicamente se introdujeron los datos o
 	\caption{Valores de la FFT de un silbido con 1024 muestras.}\label{fig:silbido1024}
 \end{figure}
 
-Para evitar confusiones de este estilo, los datos recibidos debían de recortarse, para omitir la larga cola de ceros y quedarse únicamente con los datos de las frecuencias que tienen valores altos. Pero la dificultad estaba en elegir bien el valor a partir del cual se iba a cortar, ya que si se cortaba demasiado pronto podrían quedarse muy pocas muestras y si se hacía demasiado tarde escoger aún una pequeña cola de ceros.
+Para evitar confusiones de este estilo, los datos recibidos debían de recortarse, para omitir la larga cola de ceros y quedarse únicamente con los datos de las frecuencias que tienen valores altos. Pero la dificultad estaba en elegir bien el valor a partir del cual se iba a cortar, ya que si se cortaba demasiado pronto podrían quedarse muy pocas muestras y si se hacía demasiado tarde escogería aún una pequeña cola de ceros.
 
 Por ello, se realizaron pruebas cortando a varias longitudes, y se llegó a la conclusión de que lo mejor sería cortar por la zona media, es decir, en 512 muestras, como se puede observar en la figura~\ref{fig:silbido512}.
 
@@ -641,6 +663,37 @@ Por ello, se realizaron pruebas cortando a varias longitudes, y se llegó a la c
 	\caption{Valores de la FFT de un silbido con 512 muestras.}\label{fig:silbido512}
 \end{figure}
 
+\section{Adición de nuevas muestras en el conjunto de datos del modelo}
+\label{sec:adicion-datos}
+
+Después de haber obtenido todos los valores de las muestras, el siguiente paso consistía en añadir estos nuevos datos al conjunto de datos principal del modelo.
+
+La función \textit{addLabeledAudio} recibe como parámetro de entrada un objeto con la siguiente estructura \texttt{\{label, data\}}, y es la encargada de añadir estos datos, siguiendo tres pasos:
+
+\begin{itemize}
+	\item Primero se encarga de comprobar si la etiqueta con la que viene la muestra está dentro de las etiquetas conocidas por el modelo, para ello hace uso de la función \textit{indexOf}, que devolvería un -1 en el caso de que la etiqueta no fuese reconocida por parte del modelo.
+	\item Después hará uso de la función \textit{extractInstanceFeatures}, que se ha explicado en las subsecciones~\ref{subsec:intercambio-datos},~\ref{subsec:analisis-datos} y~\ref{subsec:extraccion-datos}. Al tratarse de programación asíncrona, se utiliza la función \textit{then} cuya función consiste en esperar a que la función asíncrona devuelva un valor para después hacer uso de ese valor.
+	\item Por último, haciendo uso del valor devuelto por la función \textit{extractInstanceFeatures}, añade el nuevo dato al conjunto del modelo.
+\end{itemize}
+
+\section{Creación del conjunto de datos}
+\label{sec:creacion-dataset}
+
+Se trata de nuevo de una función asíncrona, \textit{buildDataset}, que se encarga de coger los datos del modelo y crear un conjunto de datos con el que se pueda trabajar. Para ello hace uso de las funciones explicadas en las subsecciones~\ref{subsec:intercambio-datos},~\ref{subsec:analisis-datos}, ~\ref{subsec:extraccion-datos} y en la sección~\ref{sec:adicion-datos}.
+
+Finalmente el conjunto de datos tendría la siguiente estructura:
+
+\begin{verbatim}
+	dataset = {
+    	data: [],
+    	labels: [],
+    	dataArray: []
+  	};
+\end{verbatim}
+
+La clave \textit{data} contiene todos los datos en forma de tensor, mientras que la clave \textit{dataArray} tiene los datos pero en forma de array. Por último la clave \textit{labels} contiene todas las etiquetas que es capaz de reconocer el modelo.
+
+La construcción de este objeto se hace mediante dos bucles que iteran sobre los distintos datos y van utilizando la función \textit{addLabeledAudio} sobre cada uno de ellos.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
